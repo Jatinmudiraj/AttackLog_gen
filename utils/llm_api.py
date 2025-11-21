@@ -371,37 +371,17 @@
 from typing import List, Optional
 import os
 import json
-
-from httpx import Client as HttpxClient
-from openai import OpenAI    # IMPORTANT: Use this, not 'import openai'
+import requests
 
 from config import OPENAI_API_KEY
 from utils.memory_utils import get_history, add_turn
 
 SETTINGS_FILE = "app_settings.json"
 
-# ------------------------------------------------------------
-# 🔥 Render-safe OpenAI client
-# ------------------------------------------------------------
-# Render injects proxy config → OpenAI SDK breaks.
-# We must disable proxies manually using httpx.
-# ------------------------------------------------------------
-
-# Disable all proxies completely
-http_client = HttpxClient(proxies=None)
-
-# Create OpenAI client with proxy-free HTTP backend
-client = OpenAI(
-    api_key=OPENAI_API_KEY,
-    http_client=http_client,
-)
+OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 
 
 def load_selected_model() -> str:
-    """
-    Reads the selected API model from app_settings.json.
-    Default = gpt-4o-mini.
-    """
     if not os.path.exists(SETTINGS_FILE):
         return "gpt-4o-mini"
 
@@ -423,7 +403,6 @@ def build_prompt(
     noise: str,
     num_lines: int,
 ) -> str:
-    """Build synthetic log generation prompt."""
 
     extra = f"""
 You are a high-fidelity Linux / system log generator.
@@ -431,25 +410,44 @@ You are shown EXAMPLE logs ONLY to learn the style.
 
 YOU MUST NOT repeat, copy, or lightly modify the example logs.
 
-YOUR TASK:
-- Generate *{num_lines} new synthetic log lines*.
+Generate {num_lines} completely new synthetic log lines.
 - Log type: {log_type}
 - Hostname: {hostname}
-- IP range allowed: {ip_range}
-- PID range allowed: {pid_range}
-- Date/time allowed: {date_range}
-- Noise/variation level: {noise}%
+- IP range: {ip_range}
+- PID range: {pid_range}
+- Date/time: {date_range}
+- Noise/randomness: {noise}%
 
-STRICT OUTPUT RULES:
-- Output ONLY log lines, one per line.
-- No explanations, no English sentences.
-- Timestamp MUST follow real syslog format.
-- Match spacing, host placement, PID style, and process formatting.
-- USE realistic randomness across users, PIDs, ports, IPs, services.
-- ALL logs must be original and never appear in the example section.
+STRICT RULES:
+- Output ONLY log lines.
+- No English explanations.
+- Timestamp must match real syslog format.
 """
 
-    return f"EXAMPLE LOGS (for STYLE only):\n{base_prompt}\n\nINSTRUCTIONS:\n{extra}"
+    return f"EXAMPLE LOGS:\n{base_prompt}\n\nINSTRUCTIONS:\n{extra}"
+
+
+def call_openai_api(messages, model_name, max_tokens, temperature, top_p):
+    headers = {
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
+        "Content-Type": "application/json",
+    }
+
+    payload = {
+        "model": model_name,
+        "messages": messages,
+        "temperature": temperature,
+        "top_p": top_p,
+        "max_tokens": max_tokens,
+    }
+
+    response = requests.post(OPENAI_URL, headers=headers, json=payload)
+
+    if response.status_code != 200:
+        raise Exception(f"OpenAI API error {response.status_code}: {response.text}")
+
+    data = response.json()
+    return data["choices"][0]["message"]["content"]
 
 
 def generate_logs_via_api(
@@ -466,14 +464,9 @@ def generate_logs_via_api(
     noise: str,
     memory_id: Optional[str] = None,
 ) -> List[str]:
-    """
-    Calls OpenAI API to generate logs.
-    Now Render-safe due to proxy-free client.
-    """
 
     model_name = load_selected_model()
 
-    # Build final prompt
     final_prompt = build_prompt(
         base_prompt=prompt,
         hostname=hostname,
@@ -485,19 +478,13 @@ def generate_logs_via_api(
         num_lines=num_lines,
     )
 
-    # Ensure sufficient token budget
     if max_tokens < 1024:
         max_tokens = 2048
 
-    # Build message history
     messages = [
-        {
-            "role": "system",
-            "content": "You generate realistic Linux/system log files.",
-        }
+        {"role": "system", "content": "You generate realistic Linux/system log lines."}
     ]
 
-    # Add memory if present
     if memory_id:
         history = get_history(memory_id)
         if history:
@@ -505,35 +492,25 @@ def generate_logs_via_api(
 
     messages.append({"role": "user", "content": final_prompt})
 
-    # -------------------------------------------------
-    # 🔥 MAIN API CALL (Render-safe)
-    # -------------------------------------------------
-    response = client.chat.completions.create(
-        model=model_name,
-        messages=messages,
-        temperature=temperature,
-        top_p=top_p,
-        max_tokens=max_tokens,
-    )
+    # ---------------------------
+    # FIRST REQUEST
+    # ---------------------------
+    raw = call_openai_api(messages, model_name, max_tokens, temperature, top_p)
+    lines = [l.strip() for l in raw.split("\n") if l.strip()]
 
-    raw = (response.choices[0].message.content or "").strip()
-    lines = [line for line in raw.splitlines() if line.strip()]
-
-    # -------------------------------------------------
-    # If fewer than num_lines generated → ask for more
-    # -------------------------------------------------
+    # ---------------------------
+    # SECOND REQUEST if needed
+    # ---------------------------
     if len(lines) < num_lines:
         needed = num_lines - len(lines)
+
         regen_prompt = (
             final_prompt
-            + f"\n\nNow generate {needed} MORE completely new unique log lines."
+            + f"\n\nGenerate {needed} MORE completely new synthetic log lines."
         )
 
         regen_messages = [
-            {
-                "role": "system",
-                "content": "You generate realistic Linux/system log files.",
-            }
+            {"role": "system", "content": "You generate realistic logs."}
         ]
 
         if memory_id:
@@ -543,21 +520,14 @@ def generate_logs_via_api(
 
         regen_messages.append({"role": "user", "content": regen_prompt})
 
-        regen = client.chat.completions.create(
-            model=model_name,
-            messages=regen_messages,
-            temperature=temperature,
-            top_p=top_p,
-            max_tokens=max_tokens,
+        extra_raw = call_openai_api(
+            regen_messages, model_name, max_tokens, temperature, top_p
         )
-
-        extra_raw = regen.choices[0].message.content or ""
-        extra_lines = [x for x in extra_raw.splitlines() if x.strip()]
+        extra_lines = [x.strip() for x in extra_raw.split("\n") if x.strip()]
         lines.extend(extra_lines)
 
     final_lines = lines[:num_lines]
 
-    # Save conversation into memory
     if memory_id:
         add_turn(memory_id, final_prompt, "\n".join(final_lines))
 
