@@ -1,0 +1,78 @@
+techniques:
+
+  T1110:
+    name: "Brute Force"
+    tactic: "Initial Access"
+    description: "Repeated failed login attempts showing brute-force activity."
+    keywords:
+      - "Failed password"
+      - "Invalid user"
+    detection:
+      logic: "Trigger when 5+ failed passwords occur in 1 minute."
+    examples:
+      - "Failed password for invalid user root"
+      - "Invalid user admin"
+
+  T1059:
+    name: "Command Execution"
+    tactic: "Execution"
+    description: "Shell or sudo command execution."
+    keywords:
+      - "sudo"
+      - "bash"
+      - "command="
+    detection:
+      logic: "Detect when shell commands are executed by suspicious users."
+    examples:
+      - "sudo bash -c whoami"
+      - "command=/bin/bash"
+
+  T1040:
+    name: "Network Scanning"
+    tactic: "Discovery"
+    description: "Scanning ports and probing internal networks."
+    keywords:
+      - "nmap"
+      - "scan"
+      - "port"
+    detection:
+      logic: "Alert on repeated probing attempts."
+    examples:
+      - "nmap -sV 192.168.10.0/24"
+
+  T1570:
+    name: "Lateral Tool Transfer"
+    tactic: "Lateral Movement"
+    description: "Transferring files using SCP for lateral movement."
+    keywords:
+      - "scp"
+      - "file transfer"
+      - "retrieved"
+    detection:
+      logic: "Check scp transfers across hosts."
+    examples:
+      - "scp payload.bin ubuntu@192.168.10.105"
+
+  T1036:
+    name: "Masquerading"
+    tactic: "Defense Evasion"
+    description: "Spoofed or faked filenames, paths, or user identities."
+    keywords:
+      - "fake"
+      - "spoof"
+    detection:
+      logic: "Detect suspicious user-spoofing behavior."
+    examples:
+      - "fake service started"
+
+  T1078:
+    name: "Valid Accounts"
+    tactic: "Persistence"
+    description: "Valid or stolen account credentials being used."
+    keywords:
+      - "Accepted password"
+      - "session opened"
+    detection:
+      logic: "Alert when rarely used accounts successfully authenticate."
+    examples:
+      - "Accepted password for ubuntu"

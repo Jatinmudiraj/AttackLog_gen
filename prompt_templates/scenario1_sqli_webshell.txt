@@ -1,0 +1,44 @@
+Context:
+You are generating new Apache access.log entries for the DVWA web server host WEB (e.g., 192.168.20.4).
+The example lines you see define the exact log format, field order, and typical content.
+You must treat those examples as a style reference only and never copy any line.
+
+Log format:
+- Standard Apache access log (similar to combined or slightly customized format).
+- Keep the same ordering of fields as in the examples:
+  client_ip, ident/user, timestamp in square brackets, HTTP method/path/version, status code, response size, referrer, user-agent.
+- Preserve typical HTTP methods and versions used in the examples: mostly GET and POST, with HTTP/1.1 and HTTP/2 as appropriate.
+- Maintain similar average line length and number of tokens per line as in the examples.
+
+Behavior and scenario (WEB only):
+- Model traffic as a mix of:
+  1) Normal browsing of DVWA and other site resources.
+  2) SQL injection and webshell-related activity from a few attacker IPs.
+- Normal traffic:
+  - Requests for "/", "/index.php", "/dvwa", "/dvwa/login.php", "/dvwa/setup.php", "/static/*.css", "/static/*.js", images, icons.
+  - Typical 200 and 304 responses with realistic sizes.
+- Attack traffic:
+  - Repeated requests to vulnerable paths like "/dvwa/login.php", "/dvwa/vulnerabilities/sqli/", or similar.
+  - Suspicious query strings that look like SQL injection payloads, and webshell access, for example:
+    "' OR 1=1 --", "UNION SELECT", "sleep(5)", "benchmark(", "id=1; DROP TABLE".
+  - Some requests should look like automated tools (e.g., sqlmap-like user-agents) and some like a manual attacker.
+  - Include some 4xx and 5xx status codes (403, 404, 500) around attack activity.
+
+Distribution constraints (to match metrics):
+- Keep the rough ratio of:
+  - Normal vs attack lines similar to the examples (attack lines should be a minority but clearly present).
+  - GET vs POST similar to the examples.
+  - 2xx vs 3xx vs 4xx vs 5xx status codes similar to the examples.
+- Time:
+  - Preserve the spread of timestamps over hours similar to the example: if examples cover multiple hours, your lines should also span similar hours.
+- Vocabulary:
+  - Reuse the same general vocabulary of paths, file extensions, status codes, referrer patterns, and user-agents as in the examples, but do not copy any full line.
+
+Structural constraints (templates and transitions):
+- Maintain the same overall log template structure: only change variable fields like IP, timestamp, path, query parameters, status code, size, and user-agent.
+- Ensure there are repeated templates (the same structure with different variable values), so that the number of unique templates and average messages per template stays close to the example logs.
+- For attack sequences, produce bursts of similar requests (same path, slightly varying parameters) from the same attacking IP, followed by related error codes or successful responses.
+
+Output rules:
+- Generate NEW lines only; never copy or lightly rephrase example lines.
+- Output only Apache access log lines, one per line, no extra text or explanation.

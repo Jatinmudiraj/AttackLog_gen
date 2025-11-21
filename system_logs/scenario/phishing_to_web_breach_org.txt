@@ -1,0 +1,128 @@
+2025-11-03T12:21:03.534837+00:00 Ubuntu1 dovecot: master: Dovecot v2.3.21 (47349e2482) starting up for imap, pop3 (core dumps disabled)
+2025-11-03T12:21:05.094526+00:00 Ubuntu1 postfix/postfix-script[1539]: starting the Postfix mail system
+2025-11-03T12:21:05.110586+00:00 Ubuntu1 postfix/master[1541]: daemon started -- version 3.8.6, configuration /etc/postfix
+2025-11-03T13:08:55.021753+00:00 Ubuntu1 dovecot: master: Dovecot v2.3.21 (47349e2482) starting up for imap, pop3 (core dumps disabled)
+2025-11-03T13:08:56.216984+00:00 Ubuntu1 postfix/postfix-script[1533]: starting the Postfix mail system
+2025-11-03T13:08:56.232849+00:00 Ubuntu1 postfix/master[1535]: daemon started -- version 3.8.6, configuration /etc/postfix
+2025-11-07T07:54:11.898277+00:00 Ubuntu1 dovecot: master: Dovecot v2.3.21 (47349e2482) starting up for imap, pop3 (core dumps disabled)
+2025-11-07T07:54:13.230808+00:00 Ubuntu1 postfix/postfix-script[1547]: starting the Postfix mail system
+2025-11-07T07:54:13.242982+00:00 Ubuntu1 postfix/master[1549]: daemon started -- version 3.8.6, configuration /etc/postfix
+2025-11-08T15:32:51.868237+00:00 Ubuntu1 dovecot: master: Dovecot v2.3.21 (47349e2482) starting up for imap, pop3 (core dumps disabled)
+2025-11-08T15:32:53.536036+00:00 Ubuntu1 postfix/postfix-script[1552]: starting the Postfix mail system
+2025-11-08T15:32:53.565233+00:00 Ubuntu1 postfix/master[1554]: daemon started -- version 3.8.6, configuration /etc/postfix
+2025-11-08T17:07:30.440340+00:00 Ubuntu1 postfix/pickup[1555]: 6A911C1133: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T17:07:30.459397+00:00 Ubuntu1 postfix/cleanup[18611]: 6A911C1133: message-id=<20251108170730.6A911C1133@Ubuntu1>
+2025-11-08T17:07:30.471099+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T17:07:30.521174+00:00 Ubuntu1 postfix/pickup[1555]: 7E5E7C1334: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T17:07:30.521730+00:00 Ubuntu1 postfix/cleanup[18611]: 7E5E7C1334: message-id=<20251108170730.7E5E7C1334@Ubuntu1>
+2025-11-08T17:07:30.529241+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T17:07:30.550602+00:00 Ubuntu1 postfix/smtp[18622]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=0.13, delays=0.06/0.07/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T17:07:30.558875+00:00 Ubuntu1 postfix/smtp[18626]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=0.04, delays=0.02/0.02/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T17:12:54.688892+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T17:12:54.703078+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T17:12:54.731734+00:00 Ubuntu1 postfix/smtp[18667]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=324, delays=324/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T17:12:54.736093+00:00 Ubuntu1 postfix/smtp[18668]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=324, delays=324/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T17:22:54.146849+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T17:22:54.168547+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T17:22:54.194211+00:00 Ubuntu1 postfix/smtp[18696]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=924, delays=924/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T17:22:54.200395+00:00 Ubuntu1 postfix/smtp[18697]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=924, delays=924/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T17:42:54.216305+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T17:42:54.236657+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T17:42:54.263114+00:00 Ubuntu1 postfix/smtp[18757]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=2124, delays=2124/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T17:42:54.272267+00:00 Ubuntu1 postfix/smtp[18758]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=2124, delays=2124/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T18:22:54.497939+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T18:22:54.517079+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T18:22:54.543262+00:00 Ubuntu1 postfix/smtp[18988]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=4524, delays=4524/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T18:22:54.554385+00:00 Ubuntu1 postfix/smtp[18989]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=4524, delays=4524/0.02/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:13:39.640969+00:00 Ubuntu1 postfix/pickup[19388]: 9BCD8C1132: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T19:13:39.647453+00:00 Ubuntu1 postfix/cleanup[19778]: 9BCD8C1132: message-id=<20251108191339.9BCD8C1132@Ubuntu1>
+2025-11-08T19:13:39.654177+00:00 Ubuntu1 postfix/qmgr[1556]: 9BCD8C1132: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T19:13:39.680732+00:00 Ubuntu1 postfix/pickup[19388]: A5308C1A8B: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T19:13:39.681297+00:00 Ubuntu1 postfix/cleanup[19778]: A5308C1A8B: message-id=<20251108191339.A5308C1A8B@Ubuntu1>
+2025-11-08T19:13:39.683105+00:00 Ubuntu1 postfix/smtp[19789]: 9BCD8C1132: to=<ubt4@mail.local>, relay=none, delay=0.04, delays=0.02/0.01/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:13:39.690803+00:00 Ubuntu1 postfix/qmgr[1556]: A5308C1A8B: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T19:13:39.699472+00:00 Ubuntu1 postfix/smtp[19789]: A5308C1A8B: to=<ubt4@mail.local>, relay=none, delay=0.02, delays=0.02/0/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:22:55.272458+00:00 Ubuntu1 postfix/qmgr[1556]: 9BCD8C1132: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T19:22:55.293644+00:00 Ubuntu1 postfix/qmgr[1556]: A5308C1A8B: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T19:22:55.318831+00:00 Ubuntu1 postfix/smtp[19835]: 9BCD8C1132: to=<ubt4@mail.local>, relay=none, delay=556, delays=556/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:22:55.325686+00:00 Ubuntu1 postfix/smtp[19836]: A5308C1A8B: to=<ubt4@mail.local>, relay=none, delay=556, delays=556/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:32:55.741578+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T19:32:55.760948+00:00 Ubuntu1 postfix/qmgr[1556]: 9BCD8C1132: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T19:32:55.769542+00:00 Ubuntu1 postfix/qmgr[1556]: A5308C1A8B: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T19:32:55.775387+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T19:32:55.809392+00:00 Ubuntu1 postfix/smtp[19871]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=8725, delays=8725/0.05/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:32:55.831809+00:00 Ubuntu1 postfix/smtp[19871]: 9BCD8C1132: to=<ubt4@mail.local>, relay=none, delay=1156, delays=1156/0.05/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:32:55.837695+00:00 Ubuntu1 postfix/smtp[19872]: A5308C1A8B: to=<ubt4@mail.local>, relay=none, delay=1156, delays=1156/0.05/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:32:55.846309+00:00 Ubuntu1 postfix/smtp[19871]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=8725, delays=8725/0.06/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:52:55.059464+00:00 Ubuntu1 postfix/qmgr[1556]: 9BCD8C1132: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T19:52:55.078471+00:00 Ubuntu1 postfix/qmgr[1556]: A5308C1A8B: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T19:52:55.104289+00:00 Ubuntu1 postfix/smtp[19943]: 9BCD8C1132: to=<ubt4@mail.local>, relay=none, delay=2355, delays=2355/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T19:52:55.110517+00:00 Ubuntu1 postfix/smtp[19944]: A5308C1A8B: to=<ubt4@mail.local>, relay=none, delay=2355, delays=2355/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T20:32:56.335343+00:00 Ubuntu1 postfix/qmgr[1556]: 9BCD8C1132: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T20:32:56.360455+00:00 Ubuntu1 postfix/qmgr[1556]: A5308C1A8B: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T20:32:56.401221+00:00 Ubuntu1 postfix/smtp[20051]: 9BCD8C1132: to=<ubt4@mail.local>, relay=none, delay=4757, delays=4757/0.05/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T20:32:56.411066+00:00 Ubuntu1 postfix/smtp[20051]: A5308C1A8B: to=<ubt4@mail.local>, relay=none, delay=4757, delays=4757/0.05/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T20:42:56.820850+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T20:42:56.843149+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T20:42:56.879488+00:00 Ubuntu1 postfix/smtp[20397]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=12926, delays=12926/0.05/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T20:42:56.890836+00:00 Ubuntu1 postfix/smtp[20397]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=12926, delays=12926/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:19:22.929191+00:00 Ubuntu1 postfix/pickup[20035]: E2683C2CC2: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T21:19:22.940220+00:00 Ubuntu1 postfix/cleanup[21018]: E2683C2CC2: message-id=<20251108211922.E2683C2CC2@Ubuntu1>
+2025-11-08T21:19:22.949984+00:00 Ubuntu1 postfix/qmgr[1556]: E2683C2CC2: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T21:19:22.977164+00:00 Ubuntu1 postfix/pickup[20035]: EDBF9C2CCE: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T21:19:22.977377+00:00 Ubuntu1 postfix/cleanup[21018]: EDBF9C2CCE: message-id=<20251108211922.EDBF9C2CCE@Ubuntu1>
+2025-11-08T21:19:22.978994+00:00 Ubuntu1 postfix/smtp[21029]: E2683C2CC2: to=<ubt4@mail.local>, relay=none, delay=0.06, delays=0.05/0.01/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:19:22.985504+00:00 Ubuntu1 postfix/qmgr[1556]: EDBF9C2CCE: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T21:19:22.990515+00:00 Ubuntu1 postfix/smtp[21029]: EDBF9C2CCE: to=<ubt4@mail.local>, relay=none, delay=0.02, delays=0.02/0/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:27:57.318497+00:00 Ubuntu1 postfix/qmgr[1556]: EDBF9C2CCE: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T21:27:57.334855+00:00 Ubuntu1 postfix/qmgr[1556]: E2683C2CC2: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T21:27:57.359170+00:00 Ubuntu1 postfix/smtp[21073]: EDBF9C2CCE: to=<ubt4@mail.local>, relay=none, delay=514, delays=514/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:27:57.368441+00:00 Ubuntu1 postfix/smtp[21073]: E2683C2CC2: to=<ubt4@mail.local>, relay=none, delay=514, delays=514/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:37:57.778455+00:00 Ubuntu1 postfix/qmgr[1556]: EDBF9C2CCE: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T21:37:57.800282+00:00 Ubuntu1 postfix/qmgr[1556]: E2683C2CC2: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T21:37:57.824736+00:00 Ubuntu1 postfix/smtp[21103]: EDBF9C2CCE: to=<ubt4@mail.local>, relay=none, delay=1115, delays=1115/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:37:57.836577+00:00 Ubuntu1 postfix/smtp[21103]: E2683C2CC2: to=<ubt4@mail.local>, relay=none, delay=1115, delays=1115/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:42:57.145199+00:00 Ubuntu1 postfix/qmgr[1556]: 9BCD8C1132: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T21:42:57.168272+00:00 Ubuntu1 postfix/qmgr[1556]: A5308C1A8B: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T21:42:57.193647+00:00 Ubuntu1 postfix/smtp[21119]: 9BCD8C1132: to=<ubt4@mail.local>, relay=none, delay=8958, delays=8958/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:42:57.199336+00:00 Ubuntu1 postfix/smtp[21120]: A5308C1A8B: to=<ubt4@mail.local>, relay=none, delay=8958, delays=8957/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:52:57.609337+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T21:52:57.630571+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T21:52:57.660342+00:00 Ubuntu1 postfix/smtp[21145]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=17127, delays=17127/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:52:57.665781+00:00 Ubuntu1 postfix/smtp[21146]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=17127, delays=17127/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:57:57.780197+00:00 Ubuntu1 postfix/qmgr[1556]: EDBF9C2CCE: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T21:57:57.801567+00:00 Ubuntu1 postfix/qmgr[1556]: E2683C2CC2: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T21:57:57.828288+00:00 Ubuntu1 postfix/smtp[21159]: EDBF9C2CCE: to=<ubt4@mail.local>, relay=none, delay=2315, delays=2315/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T21:57:57.839282+00:00 Ubuntu1 postfix/smtp[21159]: E2683C2CC2: to=<ubt4@mail.local>, relay=none, delay=2315, delays=2315/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T22:37:57.276349+00:00 Ubuntu1 postfix/qmgr[1556]: EDBF9C2CCE: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T22:37:57.292434+00:00 Ubuntu1 postfix/qmgr[1556]: E2683C2CC2: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T22:37:57.331140+00:00 Ubuntu1 postfix/smtp[21274]: EDBF9C2CCE: to=<ubt4@mail.local>, relay=none, delay=4714, delays=4714/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T22:37:57.342380+00:00 Ubuntu1 postfix/smtp[21274]: E2683C2CC2: to=<ubt4@mail.local>, relay=none, delay=4714, delays=4714/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T22:52:57.258750+00:00 Ubuntu1 postfix/qmgr[1556]: 9BCD8C1132: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T22:52:57.278280+00:00 Ubuntu1 postfix/qmgr[1556]: A5308C1A8B: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T22:52:57.303850+00:00 Ubuntu1 postfix/smtp[21634]: 9BCD8C1132: to=<ubt4@mail.local>, relay=none, delay=13158, delays=13158/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T22:52:57.313607+00:00 Ubuntu1 postfix/smtp[21634]: A5308C1A8B: to=<ubt4@mail.local>, relay=none, delay=13158, delays=13158/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:02:57.727228+00:00 Ubuntu1 postfix/qmgr[1556]: 7E5E7C1334: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T23:02:57.749210+00:00 Ubuntu1 postfix/qmgr[1556]: 6A911C1133: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T23:02:57.773029+00:00 Ubuntu1 postfix/smtp[22372]: 7E5E7C1334: to=<ubt4@mail.local>, relay=none, delay=21327, delays=21327/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:02:57.784841+00:00 Ubuntu1 postfix/smtp[22372]: 6A911C1133: to=<ubt4@mail.local>, relay=none, delay=21327, delays=21327/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:27:49.702732+00:00 Ubuntu1 postfix/pickup[21186]: AB2A7C2CCA: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T23:27:49.714995+00:00 Ubuntu1 postfix/cleanup[22758]: AB2A7C2CCA: message-id=<20251108232749.AB2A7C2CCA@Ubuntu1>
+2025-11-08T23:27:49.726544+00:00 Ubuntu1 postfix/qmgr[1556]: AB2A7C2CCA: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T23:27:49.755017+00:00 Ubuntu1 postfix/pickup[21186]: B7A83C2EE7: uid=1000 from=<mailserver@Ubuntu1>
+2025-11-08T23:27:49.760908+00:00 Ubuntu1 postfix/smtp[22769]: AB2A7C2CCA: to=<ubt4@mail.local>, relay=none, delay=0.07, delays=0.05/0.02/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:27:49.761605+00:00 Ubuntu1 postfix/cleanup[22758]: B7A83C2EE7: message-id=<20251108232749.B7A83C2EE7@Ubuntu1>
+2025-11-08T23:27:49.766130+00:00 Ubuntu1 postfix/qmgr[1556]: B7A83C2EE7: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T23:27:49.771327+00:00 Ubuntu1 postfix/smtp[22769]: B7A83C2EE7: to=<ubt4@mail.local>, relay=none, delay=0.02, delays=0.02/0/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:32:57.092821+00:00 Ubuntu1 postfix/qmgr[1556]: B7A83C2EE7: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T23:32:57.110035+00:00 Ubuntu1 postfix/qmgr[1556]: AB2A7C2CCA: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T23:32:57.134524+00:00 Ubuntu1 postfix/smtp[22811]: B7A83C2EE7: to=<ubt4@mail.local>, relay=none, delay=307, delays=307/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:32:57.145834+00:00 Ubuntu1 postfix/smtp[22811]: AB2A7C2CCA: to=<ubt4@mail.local>, relay=none, delay=307, delays=307/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:42:57.559155+00:00 Ubuntu1 postfix/qmgr[1556]: B7A83C2EE7: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T23:42:57.576515+00:00 Ubuntu1 postfix/qmgr[1556]: AB2A7C2CCA: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T23:42:57.601811+00:00 Ubuntu1 postfix/smtp[22839]: B7A83C2EE7: to=<ubt4@mail.local>, relay=none, delay=908, delays=908/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:42:57.610168+00:00 Ubuntu1 postfix/smtp[22840]: AB2A7C2CCA: to=<ubt4@mail.local>, relay=none, delay=908, delays=908/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:47:57.726770+00:00 Ubuntu1 postfix/qmgr[1556]: EDBF9C2CCE: from=<mailserver@Ubuntu1>, size=329, nrcpt=1 (queue active)
+2025-11-08T23:47:57.745787+00:00 Ubuntu1 postfix/qmgr[1556]: E2683C2CC2: from=<mailserver@Ubuntu1>, size=351, nrcpt=1 (queue active)
+2025-11-08T23:47:57.772997+00:00 Ubuntu1 postfix/smtp[22854]: EDBF9C2CCE: to=<ubt4@mail.local>, relay=none, delay=8915, delays=8915/0.04/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)
+2025-11-08T23:47:57.787475+00:00 Ubuntu1 postfix/smtp[22854]: E2683C2CC2: to=<ubt4@mail.local>, relay=none, delay=8915, delays=8915/0.03/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=mail.local type=MX: Host not found, try again)

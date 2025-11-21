@@ -1,0 +1,44 @@
+Context:
+You are generating new mail log entries for the MAIL server (192.168.20.3) similar to postfix/dovecot style logs.
+The example lines show the exact timestamp format, hostname, postfix or dovecot process names, queue IDs, and status fields.
+Use those examples only for style. Do not copy any line.
+
+Log format:
+- Syslog-style prefix with timestamp, hostname, process name (postfix/*, dovecot, etc.) and PID in brackets.
+- For postfix:
+  - Use queue IDs, "from=<...>", "to=<...>", status=sent/bounced/deferred/rejected, relay, delay, dsn, etc., as in the examples.
+- For dovecot/IMAP/POP3:
+  - Use login, logout, and connection log messages as per examples.
+
+Behavior and scenario (MAIL only):
+- Represent a mix of:
+  1) Normal email traffic between internal users and external domains.
+  2) One or more phishing emails targeting a specific internal user.
+- Normal traffic:
+  - Typical messages from internal@domain to external addresses and vice versa.
+  - Varied statuses (sent, deferred, occasional bounced or reject).
+- Phishing activity:
+  - A small set of messages from suspicious or unusual external senders (e.g., strange domains) to an internal user.
+  - For these messages, show delivery attempts, possible rejections or bounces, and any TLS or authentication anomalies reflected in logs.
+- Include some IMAP/POP3 login activity that matches the style in the examples (users checking their mail).
+
+Distribution constraints:
+- Preserve a similar ratio between postfix and dovecot log lines as in the examples.
+- Keep the majority of lines as apparently normal mail traffic, with a minority reflecting suspicious or error conditions.
+- Maintain similar average line length, token counts, and vocabulary (status=sent, status=bounced, NOQUEUE, TLS info, error messages, etc.).
+
+Structural and Markov constraints:
+- Queue IDs:
+  - Use a variety of plausible queue IDs, but with the same style as in the examples.
+- Templates:
+  - For each major type of log line (queueing, delivery, bounce, reject, login, logout), reuse the same textual template structure and only vary the variable fields (addresses, queue IDs, delay values, etc.).
+  - Ensure the number of unique templates and messages per template stays close to the examples.
+- Transitions:
+  - Reflect realistic postfix behavior:
+    - message queued → delivery attempts → status outcome.
+  - For phishing messages, follow a similar life cycle but with more errors or bounces.
+
+Output rules:
+- Generate only mail.log-style lines (postfix/dovecot/etc.), one per line.
+- No explanation, no out-of-band text.
+- All lines must be new; never copy example lines exactly.

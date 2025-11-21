@@ -1,0 +1,54 @@
+You are generating a SINGLE realistic attack cycle for Scenario 1 in a MERGED log file.
+
+Context and log format:
+- The example lines you see above come from a merged log: all messages are tagged with the same hostname (e.g. Ubuntu1) and include multiple facilities and services.
+- Typical processes include: auditd, systemd, sshd, apache2, apache2_error, sudo, postfix, dovecot/imap, NetworkManager, CRON, and other standard Linux daemons.
+- Timestamps use an ISO-like format with timezone offset, e.g.:
+  2025-11-20T10:05:34-05:00 Ubuntu1 sudo: ...
+- You MUST keep the same overall log format, field ordering, and style as in the examples (timestamp, hostname, process[PID]: message).
+
+Scenario (one time cycle of Web SQLi → webshell → lateral prep → mail exfil):
+- Generate logs that describe ONE compact attack cycle centered roughly around a short time window (like 10:05–10:06 on the same day).
+- Within this window, model the following high-level sequence, all visible through the merged logs:
+  1) Web probing and login attempts against DVWA on the Apache server (apache2/apache2_error):
+     - Repeated GET/POST requests to /dvwa/login.php and related DVWA paths from a small set of client IPs.
+     - Some paths or query strings look like SQL injection or brute-force login attempts.
+     - Include apache2_error lines for missing scripts or 404/500 responses, similar to the examples.
+  2) Attacker prepares tools on internal hosts via sudo and package manager:
+     - sudo commands that install curl, sshpass, mailutils, rsync, netcat-openbsd, etc.
+     - Commands run under users whose names appear in the examples (such as ubt5, ubt4, mailserver, ubuntu, root), with realistic PWD= and command arguments.
+  3) SSH / lateral movement preparation:
+     - sshd auth lines showing a few failed logins and then accepted passwords from realistic IP ranges, but still within this short window.
+     - Corresponding “session opened” and “session closed” entries.
+  4) Mail-related activity consistent with staging or exfiltration:
+     - postfix / dovecot logs for messages sent or received by the same internal users used in the sudo commands.
+     - Status fields such as status=sent, status=bounced, TLS info, queue IDs, etc., similar to the examples.
+
+Distribution constraints (to match evaluation metrics and make a Turing-test-hard sample):
+- Keep the mix of processes similar to the example one-cycle window:
+  - Most lines are still benign noise: auditd, systemd, NetworkManager, CRON, etc.
+  - A smaller but clearly visible fraction of lines correspond to apache2/apache2_error (DVWA), sudo installs, sshd, and postfix/dovecot activity.
+- Maintain similar ratios of:
+  - apache2 vs apache2_error vs other processes.
+  - sshd “Failed password” vs “Accepted password” vs session opened/closed.
+  - postfix statuses (sent / bounced / deferred) and dovecot login/logout events.
+- Preserve the *style* and *vocabulary* of messages:
+  - Reuse the same wording patterns the examples use (e.g. “sudo:     user : PWD=/home/...; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd”, “apache2 192.168.x.x - - [...] "GET /dvwa/login.php HTTP/1.1" 200 ...”, “sshd[PID]: Failed password for invalid user ... from ... port ... ssh2”).
+  - Only change variable fields: timestamps, PIDs, IP addresses, usernames, ports, queue IDs, sizes, and URLs.
+
+Structural and sequence constraints (for template and Markov similarity):
+- Logs must follow a realistic chronological flow within a single short time window (a few tens of seconds to a couple of minutes), with timestamps monotonically non-decreasing.
+- Keep the main message templates identical in structure to those in the examples:
+  - Same wording, same order of fields; only the variables differ.
+  - This keeps the number of unique templates and average messages per template close to the original.
+- Ensure realistic event transitions:
+  - For sshd: sequences like FAILED → FAILED → ACCEPTED → session opened → session closed.
+  - For apache2: bursts of similar requests to the same path with varying query parameters and occasional error lines.
+  - For sudo: password prompt / session open → apt-get install → session close.
+  - For postfix/dovecot: queued → delivered/bounced → related status lines.
+- Overall lexical and structural distribution should stay within about ±10% of the example cycle, so a TF–IDF + logistic regression classifier has difficulty distinguishing real vs generated lines (accuracy close to 0.5).
+
+Output rules:
+- Generate ONLY log lines in the same merged format as the examples, one log entry per line.
+- No explanations, no comments, no blank lines.
+- DO NOT copy or lightly edit any example line; every line must be new but stylistically and statistically indistinguishable from the original one-cycle logs.

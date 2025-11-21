@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-heading">
+    <h1>Log Timeline Viewer</h1>
+    <p class="subtext">Visualize chronological system events with severity and context.</p>
+</div>
+
+<div class="timeline-container">
+
+    <!-- LEFT PANEL -->
+    <div class="timeline-left glass">
+
+        <h2 class="gen-title">Load Log File</h2>
+
+        <div class="file-input-wrapper full-width">
+            <input type="text" id="tl_file" class="input-lg" placeholder="Select log file">
+            <input type="file" id="tl_picker" class="hidden"
+                   onchange="selectFile('tl_picker','tl_file')">
+            <button class="file-btn" onclick="document.getElementById('tl_picker').click()">Browse</button>
+        </div>
+
+        <button class="generate-btn-xl" onclick="loadTimeline()">📌 Load Timeline</button>
+
+        <h2 class="gen-title" style="margin-top:20px;">Filters</h2>
+
+        <input id="tl_search" class="input-lg" placeholder="Search logs..." onkeyup="filterTimeline()">
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="timeline-right glass">
+
+        <h2 class="gen-title">Event Timeline</h2>
+
+        <div id="timeline_box" class="timeline-box">
+            Load a file to see timeline...
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/js/timeline.js"></script>
+
+{% endblock %}

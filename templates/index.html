@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-heading">
+    <h1>Attack LogGen Dashboard</h1>
+    <p class="subtext">A unified platform for generating, cleaning, analyzing and detecting attack logs.</p>
+</div>
+
+<div class="dashboard-grid">
+
+    <div class="dash-card glass">
+        <h3>🛠 Log Generator</h3>
+        <p>Generate synthetic SSH logs using ChatGPT API or safe-mode demo generation.</p>
+        <a href="/generator" class="dash-btn">Open Generator</a>
+    </div>
+
+    <div class="dash-card glass">
+        <h3>🧼 Log Cleaner</h3>
+        <p>Extract valid SSH logs and remove unnecessary noise from log files.</p>
+        <a href="/cleaner" class="dash-btn">Open Cleaner</a>
+    </div>
+
+    <div class="dash-card glass">
+        <h3>⚔ Attack Scenarios</h3>
+        <p>Load predefined adversary simulations and step-by-step attack sequences.</p>
+        <a href="/scenarios" class="dash-btn">Explore Scenarios</a>
+    </div>
+
+    <div class="dash-card glass">
+        <h3>🧬 MITRE Mapping</h3>
+        <p>Map SSH events to MITRE ATT&CK techniques for operational insights.</p>
+        <a href="/mitre" class="dash-btn">Open MITRE</a>
+    </div>
+
+    <div class="dash-card glass">
+        <h3>📈 Timeline</h3>
+        <p>Visualize chronological flow of log events for forensic analysis.</p>
+        <a href="/timeline" class="dash-btn">View Timeline</a>
+    </div>
+
+    <div class="dash-card glass">
+        <h3>🔍 Detector</h3>
+        <p>Automatically detect suspicious patterns and highlight TTPs.</p>
+        <a href="/detector" class="dash-btn">Run Detector</a>
+    </div>
+
+</div>
+
+{% endblock %}

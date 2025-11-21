@@ -1,0 +1,14 @@
+scenarios:
+  - id: brute_ssh
+    description: SSH brute force
+    steps:
+      - offset: 0
+        source: 183.63.172.52
+        target: LabSZ
+        action: failed_password_attempts
+        count: 30
+      - offset: 120
+        source: 183.63.172.52
+        target: LabSZ
+        action: accepted_password
+        user: ubuntu

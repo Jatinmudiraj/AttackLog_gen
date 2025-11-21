@@ -1,0 +1,100 @@
+You are generating NEW syslog/auth.log style lines for the host Ubuntu1 over several days.
+
+Context and exact format:
+- The example lines above are real logs from Ubuntu1 over multiple days (e.g., 2025-11-09 to 2025-11-13).
+- They mostly contain:
+  - CRON lines:
+    "Ubuntu1 CRON[PID]: pam_unix(cron:session): session opened/closed for user root(uid=0) by root(uid=0)"
+  - sudo lines:
+    "Ubuntu1 sudo: pam_unix(sudo:session): session opened/closed for user root(uid=0) by ubt1(uid=1003)"
+    plus sudo COMMAND lines such as apt-get update / apt-get install with DEBIAN_FRONTEND and long argument lists.
+  - pkexec and systemd-logind session messages.
+  - A small number of sshd lines: invalid user, failed password, accepted password, disconnect, and session opened/closed.
+- Timestamps use ISO-like format with timezone:
+  YYYY-MM-DDTHH:MM:SS.microseconds+00:00 Ubuntu1 process[PID]: message
+
+You MUST:
+- Keep the prefix structure EXACTLY:
+  "<timestamp> Ubuntu1 <process>[PID]: <message>"
+- Keep the wording and field order inside messages for CRON, sudo, pkexec, systemd-logind and sshd, only changing variable fields:
+  - timestamps and dates
+  - PIDs and session IDs
+  - ports
+  - usernames (ubt1, ubt2) and uids
+  - environment variables and command arguments
+- Treat each different example line SHAPE as a reusable template:
+  - Do NOT paraphrase messages.
+  - Do NOT invent brand-new message structures or new English phrases that never appear in the examples.
+
+Goal with respect to the 4 evaluation methods:
+
+(1) Distributional statistics (Method 1):
+- Your generated logs must have:
+  - Total lines N very close to the original (within ±10%).
+  - Average token length and vocabulary size also close (within about ±10–15%).
+  - Similar IP entropy.
+  - Similar event ratios:
+    - invalid_user: lines with "Invalid user"
+    - failed_password: lines with "Failed password"
+    - accepted: lines with "Accepted password"
+    - disconnected: lines with "Disconnected from user" or "Disconnecting invalid user"
+    - other: everything else (CRON, sudo, pkexec, systemd-logind, etc.)
+- In the examples, “other” events dominate heavily (CRON + sudo). Keep that the same:
+  - Many CRON and sudo lines.
+  - Very few invalid_user / failed_password / accepted / disconnected lines, in similar proportions to the examples.
+- Do NOT shorten sudo lines or drop ENV fields; keep their length and complexity.
+
+(2) Classifier-based discriminability (Method 2):
+- A TF-IDF + logistic regression classifier should find it hard to distinguish real vs generated logs.
+- Avoid any “weird” tokens or phrases that never appear in the examples (no words like “attack”, “simulation”, “synthetic”, “AI”, “generator”, etc.).
+- Match the style and vocabulary extremely closely; differ only in the numeric and variable fields.
+- Keep the same mixture of CRON, sudo, pkexec, systemd-logind, sshd patterns.
+
+(3) Log template discovery (Method 3 – Drain-style):
+- Let a “template” mean a message shape where variable fields (timestamps, PIDs, usernames, IPs, ports, ENV values) are masked.
+- Your generated logs must:
+  - Use nearly ALL of the template shapes that appear in the examples at least once.
+  - Approximate the number of unique templates: |T_gen| should be close to |T_org| (within about 10%).
+  - Have HIGH overlap with the original templates: most of your templates should match some original template when variable fields are masked.
+- To achieve this:
+  - For each distinct message pattern in the examples (e.g. one CRON format, one sudo-open format, one sudo-close format, one sudo apt-get line format, pkexec format, systemd-logind format, sshd invalid user format, failed password format, disconnect format, etc.), generate multiple lines using that same pattern with different variable values.
+  - Do NOT introduce many new patterns that never existed in the examples; new structures, if any, must be very rare.
+
+(4) Event transition graph (Method 4 – Markov chain):
+- Consider event tags: INVALID_USER, FAILED_PASSWORD, ACCEPTED, DISCONNECTED, OTHER.
+- Your logs should preserve realistic sequences:
+  - CRON:
+    - A “session opened” line immediately followed by a “session closed” line for user root at specific minutes past the hour, repeated across many hours and days.
+  - sudo:
+    - “pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)”
+    - One or more COMMAND lines (apt-get update / apt-get install) with DEBIAN_FRONTEND.
+    - Then one or two “pam_unix(sudo:session): session closed for user root” lines.
+  - sshd brute force bursts:
+    - Authentication failure line,
+    - one or more “Failed password for invalid user fake from 192.168.20.1 port XXXXX ssh2” lines,
+    - then “maximum authentication attempts exceeded”,
+    - then “Disconnecting invalid user fake 192.168.20.1 port XXXXX: Too many authentication failures [preauth]”.
+  - Rare accepted sshd sessions:
+    - “Accepted password for ubt1 from 192.168.20.1 port XXXXX ssh2”
+    - “pam_unix(sshd:session): session opened for user ubt1(uid=1003) by ubt1(uid=0)”
+    - Later “Received disconnect from 192.168.20.1...” and “Disconnected from user ubt1 ...” and “session closed” with matching systemd-logind logout messages.
+- Maintain similar timing patterns:
+  - CRON jobs at similar minutes past the hour, across multiple days.
+  - sudo bursts at similar times as in the examples.
+  - sshd bursts rare and scattered, mostly from 192.168.20.1.
+
+Uniqueness and repetition:
+- You must NOT copy any example line verbatim:
+  - Change at least the timestamp, PID, and ports.
+- However, you MUST:
+  - Produce at least one log for each distinct template shape seen in the examples.
+  - Produce multiple logs for frequent templates (e.g. CRON open/close, sudo open/close, apt-get lines).
+- This ensures:
+  - The total number of UNIQUE templates is close to the original.
+  - The total number of UNIQUE log lines (full text) is high and similar to the original.
+
+Output rules:
+- Generate EXACTLY *{num_lines}* log lines, one per line.
+- No explanations, comments, or blank lines.
+- Do not mention that these logs are generated, synthetic, or examples.
+- The result should look like a realistic continuation or alternate sample of the same Ubuntu1 auth.log/syslog around the same period, passing all four evaluation checks as closely as possible.

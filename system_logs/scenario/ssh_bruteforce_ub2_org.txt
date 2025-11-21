@@ -1,0 +1,199 @@
+2025-11-09T00:05:01.673826+00:00 Ubuntu1 CRON[11039]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T00:05:01.682007+00:00 Ubuntu1 CRON[11039]: pam_unix(cron:session): session closed for user root
+2025-11-09T00:15:01.705296+00:00 Ubuntu1 CRON[11081]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T00:15:01.715534+00:00 Ubuntu1 CRON[11081]: pam_unix(cron:session): session closed for user root
+2025-11-09T03:01:21.415612+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)
+2025-11-09T03:01:21.431844+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; COMMAND=/usr/bin/apt-get update -y
+2025-11-09T03:01:21.432649+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-09T03:01:24.290188+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-09T03:01:24.291335+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-09T05:15:01.772823+00:00 Ubuntu1 CRON[12992]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T05:15:01.783475+00:00 Ubuntu1 CRON[12992]: pam_unix(cron:session): session closed for user root
+2025-11-09T05:17:01.804527+00:00 Ubuntu1 CRON[12995]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T05:17:01.810889+00:00 Ubuntu1 CRON[12995]: pam_unix(cron:session): session closed for user root
+2025-11-09T05:25:01.827296+00:00 Ubuntu1 CRON[13025]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T07:55:01.296173+00:00 Ubuntu1 CRON[24751]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T07:55:01.304532+00:00 Ubuntu1 CRON[24751]: pam_unix(cron:session): session closed for user root
+2025-11-09T08:04:48.243888+00:00 Ubuntu1 sshd[7142]: pam_unix(sshd:session): session closed for user ubt1
+2025-11-09T08:04:48.263169+00:00 Ubuntu1 systemd-logind[798]: Session 17 logged out. Waiting for processes to exit.
+2025-11-09T08:04:48.273193+00:00 Ubuntu1 systemd-logind[798]: Removed session 17.
+2025-11-09T08:37:28.693571+00:00 Ubuntu1 sshd[25299]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.20.1 
+2025-11-09T08:37:30.330939+00:00 Ubuntu1 sshd[25299]: Failed password for invalid user fake from 192.168.20.1 port 53409 ssh2
+2025-11-09T08:37:30.602227+00:00 Ubuntu1 sshd[25299]: error: maximum authentication attempts exceeded for invalid user fake from 192.168.20.1 port 53409 ssh2 [preauth]
+2025-11-09T08:37:30.602583+00:00 Ubuntu1 sshd[25299]: Disconnecting invalid user fake 192.168.20.1 port 53409: Too many authentication failures [preauth]
+2025-11-09T08:43:45.019048+00:00 Ubuntu1 gdm-password]: gkr-pam: unlocked login keyring
+2025-11-09T10:15:01.797583+00:00 Ubuntu1 CRON[26505]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T10:15:01.806247+00:00 Ubuntu1 CRON[26505]: pam_unix(cron:session): session closed for user root
+2025-11-09T10:17:01.817154+00:00 Ubuntu1 CRON[26508]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T10:17:01.826819+00:00 Ubuntu1 CRON[26508]: pam_unix(cron:session): session closed for user root
+2025-11-09T10:25:01.848644+00:00 Ubuntu1 CRON[26532]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T13:05:01.416499+00:00 Ubuntu1 CRON[27428]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T13:05:01.427233+00:00 Ubuntu1 CRON[27428]: pam_unix(cron:session): session closed for user root
+2025-11-09T13:15:01.452211+00:00 Ubuntu1 CRON[27452]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T13:15:01.461930+00:00 Ubuntu1 CRON[27452]: pam_unix(cron:session): session closed for user root
+2025-11-09T13:17:01.471199+00:00 Ubuntu1 CRON[27456]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T15:24:38.372513+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; ENV=DEBIAN_FRONTEND=noninteractive ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-09T15:24:38.372888+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-09T15:24:38.991892+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-09T15:24:38.993321+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-09T15:25:01.946978+00:00 Ubuntu1 CRON[28613]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T17:54:16.401888+00:00 Ubuntu1 sshd[29861]: Invalid user fake from 192.168.20.1 port 54117
+2025-11-09T17:55:01.473380+00:00 Ubuntu1 CRON[29863]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T17:55:01.482060+00:00 Ubuntu1 CRON[29863]: pam_unix(cron:session): session closed for user root
+2025-11-09T18:05:01.504169+00:00 Ubuntu1 CRON[30010]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T18:05:01.519752+00:00 Ubuntu1 CRON[30010]: pam_unix(cron:session): session closed for user root
+2025-11-09T20:35:01.134765+00:00 Ubuntu1 CRON[30769]: pam_unix(cron:session): session closed for user root
+2025-11-09T20:45:01.151036+00:00 Ubuntu1 CRON[30792]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T20:45:01.162963+00:00 Ubuntu1 CRON[30792]: pam_unix(cron:session): session closed for user root
+2025-11-09T20:55:01.188259+00:00 Ubuntu1 CRON[30816]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T20:55:01.200452+00:00 Ubuntu1 CRON[30816]: pam_unix(cron:session): session closed for user root
+2025-11-09T23:30:01.745288+00:00 Ubuntu1 CRON[31723]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T23:30:01.751891+00:00 Ubuntu1 CRON[31723]: pam_unix(cron:session): session closed for user root
+2025-11-09T23:35:01.775442+00:00 Ubuntu1 CRON[31738]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-09T23:35:01.786526+00:00 Ubuntu1 CRON[31738]: pam_unix(cron:session): session closed for user root
+2025-11-09T23:45:01.804671+00:00 Ubuntu1 CRON[31764]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T01:58:48.730997+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; ENV=DEBIAN_FRONTEND=noninteractive ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-10T01:58:48.731973+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-10T01:58:49.374360+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-10T01:58:49.374997+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-10T02:00:20.373268+00:00 Ubuntu1 pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by ubt2(uid=1000)
+2025-11-10T04:35:01.793808+00:00 Ubuntu1 CRON[34353]: pam_unix(cron:session): session closed for user root
+2025-11-10T04:45:01.810828+00:00 Ubuntu1 CRON[34377]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T04:45:01.818380+00:00 Ubuntu1 CRON[34377]: pam_unix(cron:session): session closed for user root
+2025-11-10T04:55:01.836815+00:00 Ubuntu1 CRON[34401]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T04:55:01.843977+00:00 Ubuntu1 CRON[34401]: pam_unix(cron:session): session closed for user root
+2025-11-10T07:35:01.295781+00:00 Ubuntu1 CRON[35390]: pam_unix(cron:session): session closed for user root
+2025-11-10T07:45:01.312694+00:00 Ubuntu1 CRON[35433]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T07:45:01.323038+00:00 Ubuntu1 CRON[35433]: pam_unix(cron:session): session closed for user root
+2025-11-10T07:55:01.339594+00:00 Ubuntu1 CRON[35464]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T07:55:01.347751+00:00 Ubuntu1 CRON[35464]: pam_unix(cron:session): session closed for user root
+2025-11-10T09:41:08.809761+00:00 Ubuntu1 systemd-logind[798]: New session 345 of user ubt1.
+2025-11-10T09:41:08.858768+00:00 Ubuntu1 (systemd): pam_unix(systemd-user:session): session opened for user ubt1(uid=1003) by ubt1(uid=0)
+2025-11-10T09:41:09.392770+00:00 Ubuntu1 sudo:     ubt1 : PWD=/home/ubt1 ; USER=root ; COMMAND=/usr/bin/bash -lc 'sudo apt-get update -y'
+2025-11-10T09:41:09.395051+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)
+2025-11-10T09:41:09.423250+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; COMMAND=/usr/bin/apt-get update -y
+2025-11-10T11:51:01.727437+00:00 Ubuntu1 sudo:     ubt1 : PWD=/home/ubt1 ; USER=root ; COMMAND=/usr/bin/bash -lc 'sudo DEBIAN_FRONTEND=noninteractive apt-get install -y curl sshpass mailutils rsync netcat-openbsd'
+2025-11-10T11:51:01.729091+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)
+2025-11-10T11:51:01.753695+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; ENV=DEBIAN_FRONTEND=noninteractive ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-10T11:51:01.754301+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-10T11:51:02.402811+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-10T14:05:01.748795+00:00 Ubuntu1 CRON[38951]: pam_unix(cron:session): session closed for user root
+2025-11-10T14:15:01.772017+00:00 Ubuntu1 CRON[38983]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T14:15:01.779969+00:00 Ubuntu1 CRON[38983]: pam_unix(cron:session): session closed for user root
+2025-11-10T14:15:23.960730+00:00 Ubuntu1 sshd[38987]: Accepted password for ubt1 from 192.168.20.1 port 52294 ssh2
+2025-11-10T14:15:23.964049+00:00 Ubuntu1 sshd[38987]: pam_unix(sshd:session): session opened for user ubt1(uid=1003) by ubt1(uid=0)
+2025-11-10T16:29:03.432603+00:00 Ubuntu1 systemd-logind[798]: Session 404 logged out. Waiting for processes to exit.
+2025-11-10T16:29:03.436185+00:00 Ubuntu1 systemd-logind[798]: Removed session 404.
+2025-11-10T16:30:01.316781+00:00 Ubuntu1 CRON[40041]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T16:30:01.325874+00:00 Ubuntu1 CRON[40041]: pam_unix(cron:session): session closed for user root
+2025-11-10T16:35:01.342142+00:00 Ubuntu1 CRON[40057]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T19:05:01.884180+00:00 Ubuntu1 CRON[41052]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T19:05:01.894052+00:00 Ubuntu1 CRON[41052]: pam_unix(cron:session): session closed for user root
+2025-11-10T19:15:01.911728+00:00 Ubuntu1 CRON[41074]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T19:15:01.918719+00:00 Ubuntu1 CRON[41074]: pam_unix(cron:session): session closed for user root
+2025-11-10T19:17:01.927379+00:00 Ubuntu1 CRON[41079]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T21:35:01.406181+00:00 Ubuntu1 CRON[41990]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T21:35:01.414255+00:00 Ubuntu1 CRON[41990]: pam_unix(cron:session): session closed for user root
+2025-11-10T21:45:01.432035+00:00 Ubuntu1 CRON[42020]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-10T21:45:01.439270+00:00 Ubuntu1 CRON[42020]: pam_unix(cron:session): session closed for user root
+2025-11-10T21:55:01.459534+00:00 Ubuntu1 CRON[42044]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T00:15:01.048662+00:00 Ubuntu1 CRON[43041]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T00:15:01.057258+00:00 Ubuntu1 CRON[43041]: pam_unix(cron:session): session closed for user root
+2025-11-11T00:17:01.072053+00:00 Ubuntu1 CRON[43054]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T00:17:01.083884+00:00 Ubuntu1 CRON[43054]: pam_unix(cron:session): session closed for user root
+2025-11-11T00:25:01.103475+00:00 Ubuntu1 CRON[43076]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T02:41:50.100846+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-11T02:41:50.118293+00:00 Ubuntu1 sudo:     ubt1 : PWD=/home/ubt1 ; USER=root ; COMMAND=/usr/bin/bash -lc 'sudo DEBIAN_FRONTEND=noninteractive apt-get install -y curl sshpass mailutils rsync netcat-openbsd'
+2025-11-11T02:41:50.119545+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)
+2025-11-11T02:41:50.135865+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; ENV=DEBIAN_FRONTEND=noninteractive ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-11T02:41:50.136136+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-11T04:55:01.062023+00:00 Ubuntu1 CRON[45565]: pam_unix(cron:session): session closed for user root
+2025-11-11T05:05:01.085874+00:00 Ubuntu1 CRON[45591]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T05:05:01.095521+00:00 Ubuntu1 CRON[45591]: pam_unix(cron:session): session closed for user root
+2025-11-11T05:09:02.334973+00:00 Ubuntu1 sshd[45602]: Accepted password for ubt1 from 192.168.20.1 port 63181 ssh2
+2025-11-11T05:09:02.340646+00:00 Ubuntu1 sshd[45602]: pam_unix(sshd:session): session opened for user ubt1(uid=1003) by ubt1(uid=0)
+2025-11-11T07:17:01.523519+00:00 Ubuntu1 CRON[50634]: pam_unix(cron:session): session closed for user root
+2025-11-11T07:25:01.537398+00:00 Ubuntu1 CRON[50657]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T07:25:01.542135+00:00 Ubuntu1 CRON[50657]: pam_unix(cron:session): session closed for user root
+2025-11-11T07:30:01.550983+00:00 Ubuntu1 CRON[50669]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T07:30:01.559710+00:00 Ubuntu1 CRON[50669]: pam_unix(cron:session): session closed for user root
+2025-11-11T09:55:01.043774+00:00 Ubuntu1 CRON[51755]: pam_unix(cron:session): session closed for user root
+2025-11-11T10:05:01.066543+00:00 Ubuntu1 CRON[51779]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T10:05:01.079925+00:00 Ubuntu1 CRON[51779]: pam_unix(cron:session): session closed for user root
+2025-11-11T10:15:01.102102+00:00 Ubuntu1 CRON[51802]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T10:15:01.109955+00:00 Ubuntu1 CRON[51802]: pam_unix(cron:session): session closed for user root
+2025-11-11T12:30:01.672684+00:00 Ubuntu1 CRON[52793]: pam_unix(cron:session): session closed for user root
+2025-11-11T12:35:01.695390+00:00 Ubuntu1 CRON[52808]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T12:35:01.705706+00:00 Ubuntu1 CRON[52808]: pam_unix(cron:session): session closed for user root
+2025-11-11T12:45:01.724209+00:00 Ubuntu1 CRON[52832]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T12:45:01.733492+00:00 Ubuntu1 CRON[52832]: pam_unix(cron:session): session closed for user root
+2025-11-11T15:15:01.281083+00:00 Ubuntu1 CRON[53775]: pam_unix(cron:session): session closed for user root
+2025-11-11T15:17:01.297015+00:00 Ubuntu1 CRON[53779]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T15:17:01.304726+00:00 Ubuntu1 CRON[53779]: pam_unix(cron:session): session closed for user root
+2025-11-11T15:25:01.325675+00:00 Ubuntu1 CRON[53803]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T15:25:01.337819+00:00 Ubuntu1 CRON[53803]: pam_unix(cron:session): session closed for user root
+2025-11-11T17:35:20.802610+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)
+2025-11-11T17:35:20.821602+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; COMMAND=/usr/bin/apt-get update -y
+2025-11-11T17:35:20.821964+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-11T17:35:33.727636+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-11T17:35:33.728834+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-11T19:42:20.688399+00:00 Ubuntu1 pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by ubt2(uid=1000)
+2025-11-11T19:42:20.696359+00:00 Ubuntu1 pkexec[55845]: ubt2: Executing command [USER=root] [TTY=unknown] [CWD=/home/ubt2] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+2025-11-11T19:45:01.337915+00:00 Ubuntu1 CRON[55862]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T19:45:01.347963+00:00 Ubuntu1 CRON[55862]: pam_unix(cron:session): session closed for user root
+2025-11-11T19:55:01.372034+00:00 Ubuntu1 CRON[55890]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-11T22:09:20.313097+00:00 Ubuntu1 sshd[56902]: Received disconnect from 192.168.20.1 port 64857:11: disconnected by user
+2025-11-11T22:09:20.313832+00:00 Ubuntu1 sshd[56902]: Disconnected from user ubt1 192.168.20.1 port 64857
+2025-11-11T22:09:20.314639+00:00 Ubuntu1 sshd[56836]: pam_unix(sshd:session): session closed for user ubt1
+2025-11-11T22:09:20.323632+00:00 Ubuntu1 systemd-logind[798]: Session 651 logged out. Waiting for processes to exit.
+2025-11-11T22:09:20.327664+00:00 Ubuntu1 systemd-logind[798]: Removed session 651.
+2025-11-12T00:25:01.365394+00:00 Ubuntu1 CRON[57948]: pam_unix(cron:session): session closed for user root
+2025-11-12T00:35:01.384091+00:00 Ubuntu1 CRON[57973]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T00:35:01.393456+00:00 Ubuntu1 CRON[57973]: pam_unix(cron:session): session closed for user root
+2025-11-12T00:45:01.413618+00:00 Ubuntu1 CRON[57996]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T00:45:01.421945+00:00 Ubuntu1 CRON[57996]: pam_unix(cron:session): session closed for user root
+2025-11-12T03:15:01.915344+00:00 Ubuntu1 CRON[59372]: pam_unix(cron:session): session closed for user root
+2025-11-12T03:17:01.930890+00:00 Ubuntu1 CRON[59376]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T03:17:01.942104+00:00 Ubuntu1 CRON[59376]: pam_unix(cron:session): session closed for user root
+2025-11-12T03:25:01.965556+00:00 Ubuntu1 CRON[59398]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T03:25:01.974366+00:00 Ubuntu1 CRON[59398]: pam_unix(cron:session): session closed for user root
+2025-11-12T06:13:30.277998+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)
+2025-11-12T06:13:30.294028+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; COMMAND=/usr/bin/apt-get update -y
+2025-11-12T06:13:30.294846+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-12T06:13:38.176372+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-12T06:13:38.177796+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-12T08:21:41.771144+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=1003)
+2025-11-12T08:21:41.799015+00:00 Ubuntu1 sudo:     root : PWD=/home/ubt1 ; USER=root ; ENV=DEBIAN_FRONTEND=noninteractive ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-12T08:21:41.801479+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt1(uid=0)
+2025-11-12T08:21:42.433098+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-12T08:21:42.434410+00:00 Ubuntu1 sudo: pam_unix(sudo:session): session closed for user root
+2025-11-12T11:17:01.497559+00:00 Ubuntu1 CRON[62358]: pam_unix(cron:session): session closed for user root
+2025-11-12T11:25:01.518046+00:00 Ubuntu1 CRON[62382]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T11:25:01.525371+00:00 Ubuntu1 CRON[62382]: pam_unix(cron:session): session closed for user root
+2025-11-12T11:30:01.538281+00:00 Ubuntu1 CRON[62392]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T11:30:01.545186+00:00 Ubuntu1 CRON[62392]: pam_unix(cron:session): session closed for user root
+2025-11-12T15:05:01.276161+00:00 Ubuntu1 CRON[63162]: pam_unix(cron:session): session closed for user root
+2025-11-12T15:15:01.299929+00:00 Ubuntu1 CRON[63184]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T15:15:01.309007+00:00 Ubuntu1 CRON[63184]: pam_unix(cron:session): session closed for user root
+2025-11-12T15:17:01.324564+00:00 Ubuntu1 CRON[63189]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T15:17:01.334036+00:00 Ubuntu1 CRON[63189]: pam_unix(cron:session): session closed for user root
+2025-11-12T18:45:01.067332+00:00 Ubuntu1 CRON[64234]: pam_unix(cron:session): session closed for user root
+2025-11-12T18:55:01.085484+00:00 Ubuntu1 CRON[64256]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T18:55:01.098034+00:00 Ubuntu1 CRON[64256]: pam_unix(cron:session): session closed for user root
+2025-11-12T19:05:01.115575+00:00 Ubuntu1 CRON[64279]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T19:05:01.125817+00:00 Ubuntu1 CRON[64279]: pam_unix(cron:session): session closed for user root
+2025-11-12T22:30:01.885371+00:00 Ubuntu1 CRON[64953]: pam_unix(cron:session): session closed for user root
+2025-11-12T22:35:01.903203+00:00 Ubuntu1 CRON[64971]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T22:35:01.911329+00:00 Ubuntu1 CRON[64971]: pam_unix(cron:session): session closed for user root
+2025-11-12T22:45:01.937009+00:00 Ubuntu1 CRON[64993]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-12T22:45:01.947854+00:00 Ubuntu1 CRON[64993]: pam_unix(cron:session): session closed for user root
+2025-11-13T02:25:01.675252+00:00 Ubuntu1 CRON[65647]: pam_unix(cron:session): session closed for user root
+2025-11-13T02:35:01.689213+00:00 Ubuntu1 CRON[65678]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-13T02:35:01.694852+00:00 Ubuntu1 CRON[65678]: pam_unix(cron:session): session closed for user root
+2025-11-13T02:45:01.708332+00:00 Ubuntu1 CRON[65701]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-13T02:45:01.712945+00:00 Ubuntu1 CRON[65701]: pam_unix(cron:session): session closed for user root
+2025-11-13T06:25:01.406532+00:00 Ubuntu1 CRON[66482]: pam_unix(cron:session): session closed for user root
+2025-11-13T06:35:01.425201+00:00 Ubuntu1 CRON[66508]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-13T06:35:01.433392+00:00 Ubuntu1 CRON[66508]: pam_unix(cron:session): session closed for user root
+2025-11-13T06:45:01.453911+00:00 Ubuntu1 CRON[66531]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-13T06:45:01.461580+00:00 Ubuntu1 CRON[66531]: pam_unix(cron:session): session closed for user root

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-heading">
+    <h1>Log Cleaner</h1>
+    <p class="subtext">Convert messy raw logs into clean, normalized OpenSSH-style logs.</p>
+</div>
+
+<div class="gen-container">
+
+    <!-- LEFT PANEL -->
+    <div class="gen-left glass">
+
+        <h2 class="gen-title">Cleaning Configuration</h2>
+
+        <div class="form-grid">
+
+            <!-- INPUT FILE (dropdown populated from server) -->
+            <div class="form-block full-width">
+                <label for="input_file">Input Log File (server)</label>
+                <select id="input_file" class="input-lg">
+                    <option value="">-- Select input log file --</option>
+                </select>
+                <small class="hint">
+                    These are files under <code>{{ BASE_LOG_FOLDER if BASE_LOG_FOLDER else 'system_logs' }}</code>.
+                </small>
+            </div>
+
+            <!-- OUTPUT FILE (text input, auto-filled) -->
+            <div class="form-block full-width">
+                <label for="output_file">Output File Path (server)</label>
+                <input id="output_file"
+                       class="input-lg"
+                       type="text"
+                       placeholder="Auto-filled as &lt;input&gt;_cleaned.txt" />
+                <small class="hint">
+                    You can keep the suggested path or change it (it’s a server-side path).
+                </small>
+            </div>
+
+            <!-- CLEAN MODE -->
+            <div class="form-block full-width">
+                <label for="clean_mode">Cleaner Mode</label>
+                <select id="clean_mode" class="input-lg">
+                    <option value="sshd">SSH/Syslog Filter</option>
+                    <option value="apache">Apache Log Cleaner</option>
+                    <option value="all">Generic Cleaner</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button class="generate-btn-xl" onclick="cleanFile()">🧼 Clean Logs</button>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="gen-right glass">
+        <div class="console-header">
+            <span class="green-dot"></span>
+            Cleaned Preview
+            <span id="clean_count" class="console-meta">0 lines</span>
+        </div>
+
+        <div class="console-toolbar">
+            <button type="button" onclick="copyClean()">Copy</button>
+            <button type="button" onclick="downloadClean()">Download</button>
+            <button type="button" onclick="clearClean()">Clear</button>
+        </div>
+
+        <pre id="clean_preview" class="console-box"></pre>
+
+    </div>
+
+</div>
+
+<script src="/static/js/cleaner.js"></script>
+
+{% endblock %}

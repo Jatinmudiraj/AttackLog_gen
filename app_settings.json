@@ -1,0 +1,7 @@
+{
+    "api_model": "gpt-4o-mini",
+    "base_folder": "system_logs",
+    "dataset_folder": "OpenStack",
+    "config_folder": "configs",
+    "topo_file": "configs/scenarios.yaml"
+}

@@ -1,0 +1,46 @@
+Context:
+You are generating Linux audit log entries (auditd) for the UB3 host, where auditd is already configured.
+The example lines show type=EXECVE, type=SYSCALL, and related audit messages, including fields such as uid, auid, exe, cmdline, and file paths.
+Use examples purely for structure and vocabulary; do not copy them.
+
+Log format:
+- Use the same auditd structure as in the examples:
+  - "type=EXECVE msg=audit(...): argc=... a0=... a1=... ..." etc.
+  - "type=SYSCALL msg=audit(...): arch=... syscall=... success=... uid=... gid=... exe=\"...\" ..." etc.
+- Preserve timestamp style and audit IDs (the numeric part inside audit(...)) similar to the examples.
+- Maintain the same ordering of key=value fields for each record type.
+
+Behavior and scenario (UB3 only):
+- Show activity consistent with:
+  1) An attacker already having interactive access on UB3.
+  2) Attempts to tamper with logs.
+  3) Starting a crypto-miner-like process.
+- Log tampering behavior:
+  - EXECVE/SYSCALL records where commands like "rm", "truncate", "echo >" or "shred" are executed against log files such as /var/log/auth.log, /var/log/syslog, /var/log/audit/audit.log, or journal directories.
+  - File permission changes (chmod, chown) on log-related files or directories.
+- Crypto-like behavior:
+  - Execution of binaries that resemble miners (names like xmrig, minerd, or disguised with generic names) with command-line options that include pool URLs, wallet addresses, or stratum endpoints.
+  - High-frequency repetitive commands or processes that match miner patterns.
+- Include some normal background EXECVE/SYSCALL entries (system services, benign commands) similar to the examples so that the attacker activity is blended with noise.
+
+Distribution constraints:
+- Keep EXECVE and SYSCALL records as the dominant types, with a similar ratio to the examples.
+- Maintain similar average length and field cardinality per log line.
+- Use UID/GID patterns that look realistic (e.g., root for destructive commands, non-root users for some benign activity), similar to the examples.
+
+Structural and Markov constraints:
+- Templates:
+  - Reuse the main templates from the examples: EXECVE records for command invocations; SYSCALL records describing the underlying system call.
+  - Only vary timestamps, PIDs, audit IDs, file paths, arguments, and result fields.
+- Transitions:
+  - Show sequences where EXECVE and SYSCALL pairs correspond to the same command.
+  - For log tampering:
+    - sequences like EXECVE("rm /var/log/...") followed by SYSCALL success, possibly followed by other related EXECVE/SYSCALL operations.
+  - For mining:
+    - EXECVE of mining binary → repeated SYSCALL records reflecting its ongoing activity.
+- Keep these patterns statistically similar in frequency and ordering to the example logs (e.g., tampering commands are relatively rare compared to all EXECVE/SYSCALL noise).
+
+Output rules:
+- Generate only auditd-style lines (type=EXECVE, type=SYSCALL, and any directly related audit types present in examples), one per line.
+- No explanation or extra text.
+- All lines must be novel while preserving the same format, templates, and vocabulary structure as the examples.

@@ -1,0 +1,64 @@
+2025-11-20T10:05:01-05:00 LabSZ apache2 192.168.20.100 - - [20/Nov/2025:10:05:01 -0500] "GET /dvwa/login.php?username=admin&password=admin' OR '1'='1' HTTP/1.1" 200 512 "-" "curl/7.68.0"
+2025-11-20T10:05:02-05:00 LabSZ apache2_error [Thu Nov 20 10:05:02.123456 2025] [php:error] [pid 10280] [client 192.168.20.100:51726] script '/var/www/html/dvwa/login.php' not found or unable to stat
+2025-11-20T10:05:03-05:00 LabSZ apache2 192.168.20.100 - - [20/Nov/2025:10:05:03 -0500] "POST /dvwa/login.php HTTP/1.1" 200 256 "-" "curl/7.68.0"
+2025-11-20T10:05:04-05:00 LabSZ apache2 192.168.20.100 - - [20/Nov/2025:10:05:04 -0500] "POST /dvwa/login.php HTTP/1.1" 200 256 "-" "curl/7.68.0"
+2025-11-20T10:05:05-05:00 LabSZ apache2 192.168.20.100 - - [20/Nov/2025:10:05:05 -0500] "GET /dvwa/vulnerabilities/sqli/?id=1' OR '1'='1' HTTP/1.1" 200 512 "-" "curl/7.68.0"
+2025-11-20T10:05:06-05:00 LabSZ apache2_error [Thu Nov 20 10:05:06.234567 2025] [php:error] [pid 10281] [client 192.168.20.100:51738] script '/var/www/html/dvwa/login.php' not found or unable to stat
+2025-11-20T10:05:07-05:00 LabSZ apache2 192.168.20.100 - - [20/Nov/2025:10:05:07 -0500] "POST /dvwa/login.php HTTP/1.1" 200 256 "-" "curl/7.68.0"
+2025-11-20T10:05:08-05:00 LabSZ apache2 192.168.20.100 - - [20/Nov/2025:10:05:08 -0500] "GET /dvwa/vulnerabilities/sqli/?id=1' OR '1'='2' HTTP/1.1" 200 512 "-" "curl/7.68.0"
+2025-11-20T10:05:09-05:00 LabSZ apache2 192.168.20.101 - - [20/Nov/2025:10:05:09 -0500] "POST /dvwa/login.php HTTP/1.1" 200 256 "-" "curl/7.68.0"
+2025-11-20T10:05:10-05:00 LabSZ apache2 192.168.20.101 - - [20/Nov/2025:10:05:10 -0500] "GET /dvwa/vulnerabilities/sqli/?id=1' OR '1'='1' HTTP/1.1" 200 512 "-" "curl/7.68.0"
+2025-11-20T10:05:11-05:00 LabSZ apache2_error [Thu Nov 20 10:05:11.345678 2025] [php:error] [pid 10280] [client 192.168.20.101:51750] script '/var/www/html/dvwa/login.php' not found or unable to stat
+2025-11-20T10:05:12-05:00 LabSZ sudo:     ubt5 : PWD=/home/ubt5 ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-20T10:05:12-05:00 LabSZ sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt5(uid=1000)
+2025-11-20T10:05:15-05:00 LabSZ sudo: pam_unix(sudo:session): session closed for user root
+2025-11-20T10:05:15-05:00 LabSZ sudo:     ubt4 : PWD=/home/ubt4 ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-20T10:05:15-05:00 LabSZ sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt4(uid=1000)
+2025-11-20T10:05:18-05:00 LabSZ sudo: pam_unix(sudo:session): session closed for user root
+2025-11-20T10:05:19-05:00 LabSZ sshd[11566]: Failed password for invalid user fake from 192.168.20.102 port 52148 ssh2
+2025-11-20T10:05:19-05:00 LabSZ sshd[11566]: Failed password for invalid user fake from 192.168.20.103 port 52150 ssh2
+2025-11-20T10:05:20-05:00 LabSZ sshd[11568]: Failed password for invalid user fake from 192.168.20.104 port 52152 ssh2
+2025-11-20T10:05:21-05:00 LabSZ sshd[11570]: Accepted password for ubt5 from 192.168.20.100 port 52155 ssh2
+2025-11-20T10:05:21-05:00 LabSZ sshd[11570]: pam_unix(sshd:session): session opened for user ubt5(uid=1000) by (uid=0)
+2025-11-20T10:05:25-05:00 LabSZ sshd[11570]: pam_unix(sshd:session): session closed for user ubt5
+2025-11-20T10:05:30-05:00 LabSZ postfix/smtp[12090]: 1A2B3C4D: to=<user@example.com>, relay=none, delay=0.1, delays=0.1/0.0/0.0/0.0, dsn=2.0.0, status=sent (delivered via local mail)
+2025-11-20T10:05:30-05:00 LabSZ postfix/qmgr[12085]: 1A2B3C4D: from=<ubt5@labsz.local>, size=246, nrcpt=1 (queue active)
+2025-11-20T10:05:32-05:00 LabSZ postfix/smtp[12090]: 1A2B3C4D: to=<user@example.com>, relay=none, delay=0.1, delays=0.1/0.0/0.0/0.0, dsn=5.1.1, status=bounced (unknown user: "user@example.com")
+2025-11-20T10:05:34-05:00 LabSZ dovecot: imap-login: Login: user=<ubt5>, method=PLAIN, rip=192.168.20.100, lip=192.168.20.1, mpid=11570
+2025-11-20T10:05:34-05:00 LabSZ dovecot: imap-login: Login: user=<ubt4>, method=PLAIN, rip=192.168.20.101, lip=192.168.20.1, mpid=11570
+2025-11-20T10:05:35-05:00 LabSZ dovecot: imap-login: Login: user=<ubt5>, method=PLAIN, rip=192.168.20.100, lip=192.168.20.1, mpid=11570
+2025-11-20T10:05:35-05:00 LabSZ dovecot: imap-login: Logout: user=<ubt5>, rip=192.168.20.100, lip=192.168.20.1, mpid=11570
+2025-11-20T10:05:36-05:00 LabSZ dovecot: imap-login: Logout: user=<ubt4>, rip=192.168.20.101, lip=192.168.20.1, mpid=11570
+2025-11-20T10:05:36-05:00 LabSZ postfix/smtp[12090]: 1A2B3C4D: to=<user@example.com>, relay=none, delay=0.1, delays=0.1/0
+2025-11-20T10:05:51-05:00 LabSZ apache2 192.168.20.1 - - [20/Nov/2025:10:05:51 +0000] "POST /dvwa/login.php HTTP/1.1" 200 285 "-" "curl/8.15.0"
+2025-11-20T10:05:52-05:00 LabSZ apache2 192.168.20.1 - - [20/Nov/2025:10:05:52 +0000] "GET /dvwa/vulnerabilities/sqli/ HTTP/1.1" 200 412 "-" "curl/8.15.0"
+2025-11-20T10:05:53-05:00 LabSZ apache2_error [Thu Nov 20 10:05:53.174582 2025] [php:error] [pid 10280] [client 192.168.20.1:51720] script '/var/www/html/dvwa/login.php' not found or unable to stat
+2025-11-20T10:05:54-05:00 LabSZ apache2 192.168.20.1 - - [20/Nov/2025:10:05:54 +0000] "POST /dvwa/login.php?username=admin&password=admin' OR '1'='1' HTTP/1.1" 200 295 "-" "curl/8.15.0"
+2025-11-20T10:05:54-05:00 LabSZ apache2_error [Thu Nov 20 10:05:54.312756 2025] [php:error] [pid 10281] [client 192.168.20.1:51722] script '/var/www/html/dvwa/login.php' not found or unable to stat
+2025-11-20T10:05:55-05:00 LabSZ apache2 192.168.20.1 - - [20/Nov/2025:10:05:55 +0000] "POST /dvwa/login.php HTTP/1.1" 200 300 "-" "curl/8.15.0"
+2025-11-20T10:05:56-05:00 LabSZ apache2_error [Thu Nov 20 10:05:56.467173 2025] [php:error] [pid 10279] [client 192.168.20.1:51724] script '/var/www/html/dvwa/login.php' not found or unable to stat
+2025-11-20T10:05:56-05:00 LabSZ apache2 192.168.20.1 - - [20/Nov/2025:10:05:56 +0000] "GET /dvwa/vulnerabilities/sqli/ HTTP/1.1" 200 412 "-" "curl/8.15.0"
+2025-11-20T10:05:57-05:00 LabSZ apache2 192.168.20.1 - - [20/Nov/2025:10:05:57 +0000] "POST /dvwa/login.php?username=admin&password=1234 HTTP/1.1" 200 265 "-" "curl/8.15.0"
+2025-11-20T10:05:57-05:00 LabSZ apache2 192.168.20.1 - - [20/Nov/2025:10:05:57 +0000] "GET /dvwa/vulnerabilities/sqli/ HTTP/1.1" 200 412 "-" "curl/8.15.0"
+2025-11-20T10:05:58-05:00 LabSZ apache2_error [Thu Nov 20 10:05:58.622457 2025] [php:error] [pid 10282] [client 192.168.20.1:51728] script '/var/www/html/dvwa/login.php' not found or unable to stat
+2025-11-20T10:05:58-05:00 LabSZ sshd[11456]: Failed password for invalid user ubt5 from 192.168.20.5 port 52160 ssh2
+2025-11-20T10:05:58-05:00 LabSZ sshd[11458]: Failed password for invalid user ubt5 from 192.168.20.5 port 52162 ssh2
+2025-11-20T10:05:59-05:00 LabSZ sshd[11462]: Accepted password for ubt5 from 192.168.20.5 port 52164 ssh2
+2025-11-20T10:05:59-05:00 LabSZ sudo:     ubt5 : PWD=/home/ubt5 ; USER=root ; COMMAND=/usr/bin/apt-get install -y curl sshpass mailutils rsync netcat-openbsd
+2025-11-20T10:06:00-05:00 LabSZ sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubt5(uid=1000)
+2025-11-20T10:06:01-05:00 LabSZ sudo: pam_unix(sudo:session): session closed for user root
+2025-11-20T10:06:02-05:00 LabSZ sshd[11465]: pam_unix(sshd:session): session opened for user ubt5(uid=1000) by ubt5(uid=0)
+2025-11-20T10:06:03-05:00 LabSZ sshd[11468]: pam_unix(sshd:session): session closed for user ubt5
+2025-11-20T10:06:03-05:00 LabSZ postfix/smtpd[11500]: connect from localhost[127.0.0.1]
+2025-11-20T10:06:03-05:00 LabSZ postfix/smtpd[11500]: 5B4B6A9F0A: client=localhost[127.0.0.1]
+2025-11-20T10:06:03-05:00 LabSZ postfix/cleanup[11505]: 5B4B6A9F0A: message-id=<20251120100603.5B4B6A9F0A@LabSZ>
+2025-11-20T10:06:03-05:00 LabSZ postfix/smtp[11506]: 5B4B6A9F0A: to=<user@example.com>, relay=none, delay=0.1, delays=0.1/0.1/0/0.1, dsn=4.3.0, status=deferred (host localhost[127.0.0.1] said: 421 4.3.0 Service not available)
+2025-11-20T10:06:04-05:00 LabSZ postfix/smtpd[11500]: disconnect from localhost[127.0.0.1]
+2025-11-20T10:06:04-05:00 LabSZ dovecot: imap-login: Disconnected (no auth attempts in 0 secs): user=<>, method=PLAIN, rip=192.168.20.1, lip=192.168.20.1, mpid=10281, TLS
+2025-11-20T10:06:05-05:00 LabSZ dovecot: imap-login: Login: user=<user@example.com>, method=PLAIN, rip=192.168.20.1, lip=192.168.20.1, mpid=10282, TLS
+2025-11-20T10:06:05-05:00 LabSZ dovecot: imap-login: Disconnected (auth failed, 1 attempts in 0 secs): user=<user@example.com>, method=PLAIN, rip=192.168.20.1, lip=192.168.20.1, mpid=10283, TLS
+2025-11-20T10:06:06-05:00 LabSZ dovecot: imap-login: Login: user=<user@example.com>, method=PLAIN, rip=192.168.20.1, lip=192.168.20.1, mpid=10284, TLS
+2025-11-20T10:06:06-05:00 LabSZ dovecot: imap-login: Disconnected (auth failed, 1 attempts in 0 secs): user=<user@example.com>, method=PLAIN, rip=192.168.20.1, lip=192.168.20.1, mpid=10285, TLS
+2025-11-20T10:06:07-05:00 LabSZ postfix/smtpd[11507]: connect from localhost[127.0.0.1]
+2025-11-20T10:06:07-05:00 LabSZ postfix/smtpd[11507]: 5B4B6A9F0B: client=localhost[127.0.0.1]
+2025-11-20T10:06:07-05:00 LabSZ postfix/cleanup[11508]: 5B4B6A9F0B: message-id=<20251120100607.5B4B6A9

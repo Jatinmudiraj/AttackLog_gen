@@ -1,0 +1,42 @@
+Context:
+You are generating syslog-style entries for the UBT5 host, which is used as a dev/build machine.
+The example lines show systemd messages, service logs, git/curl/rsync/other CLI activity as recorded in syslog.
+Use the examples only as a style reference and never copy them.
+
+Log format:
+- Syslog-like prefix with timestamp, hostname (UBT5 or exact hostname from examples), process name (systemd, CRON, sshd, bash, sudo, git, rsync, etc.), and message.
+- Preserve the same timestamp format and field ordering as in the examples.
+- Many lines will be systemd or other noisy background processes; a subset will reflect dev and deployment commands.
+
+Behavior and scenario (UBT5 only):
+- Combine:
+  1) Normal background system activity (systemd units, login sessions, cron jobs).
+  2) A supply-chain style pipeline:
+     - Fetch code or artifacts from a remote repository.
+     - Build or install dependencies.
+     - Sync deployment artifacts to another host (e.g., WEB) using rsync or scp.
+- Dev/deploy pattern:
+  - git clone, git pull, or git fetch against internal or external repos.
+  - curl or wget downloading tarballs or scripts.
+  - package manager commands (apt, pip, npm, etc.) that install dependencies.
+  - rsync or scp commands pushing artifacts to another machine (e.g., an SSH destination that looks like WEB).
+  - Optional systemctl or service restart commands for web services, executed from UBT5 via SSH.
+
+Distribution constraints:
+- Preserve the ratio between “noise” lines (systemd, cron, kernel, generic logs) and “dev/deploy” lines similar to the examples: dev/deploy lines should be visible but not dominate everything.
+- Maintain similar average line length and token counts as the example UBT5 logs.
+- Reuse similar vocabulary: git, clone, fetch, origin, curl, wget, rsync, scp, systemd units, service names, etc.
+
+Structural and Markov constraints:
+- Templates:
+  - For systemd and other background messages, reuse the same patterns (start/stop, Created slice, Started service, etc.) but change timestamps, unit names, PIDs.
+  - For git/curl/rsync commands, use consistent templates that match the example structure and only vary URLs, paths, hostnames, and options.
+- Transitions:
+  - Reflect a plausible sequence:
+    - systemd noise → git clone/fetch → dependency installation → rsync/scp deployment → optional remote restart steps.
+  - Keep ordering of events similar to a real pipeline (not random isolated commands).
+
+Output rules:
+- Generate only syslog-style lines for UBT5, one per line.
+- No comments, no explanations.
+- All lines must be new and not copies of example lines, but very close in structure and vocabulary.

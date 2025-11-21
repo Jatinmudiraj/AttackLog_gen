@@ -1,0 +1,10 @@
+Dec 12 06:45:21 ub1 sshd[1245]: Invalid user admin from 192.168.20.4 port 55421 ssh2
+Dec 12 06:45:23 ub1 sshd[1245]: Failed password for invalid user admin from 192.168.20.4 port 55421 ssh2
+Dec 12 06:45:24 ub1 sshd[1245]: Connection closed by authenticating user admin 192.168.20.4 port 55421 [preauth]
+Dec 12 06:46:01 ub1 sshd[1542]: Failed password for root from 10.0.0.5 port 51522 ssh2
+Dec 12 06:46:03 ub1 sshd[1542]: Received disconnect from 10.0.0.5 port 51522: Bye Bye [preauth]
+Dec 12 06:46:11 ub1 sshd[2001]: Accepted password for ubuntu from 192.168.10.101 port 52533 ssh2
+Dec 12 06:46:12 ub1 sshd[2001]: pam_unix(sshd:session): session opened for user ubuntu by (uid=0)
+Dec 12 06:46:42 ub1 sshd[2001]: pam_unix(sshd:session): session closed for user ubuntu
+Dec 12 06:47:01 ub1 CRON[2104]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 12 06:47:01 ub1 CRON[2104]: pam_unix(cron:session): session closed for user root

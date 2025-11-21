@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-heading">
+    <h1>Attack Scenarios</h1>
+    <p class="subtext">Visualize multi-stage attack chains across VMs using clean diagrams.</p>
+</div>
+
+<div class="scenario-container">
+
+    <!-- LEFT COLUMN: Scenarios -->
+    <div class="scenario-left glass">
+
+        <h2 class="gen-title">Scenario List</h2>
+
+        <div id="scenario_list" class="scenario-list">
+            <!-- Filled by JS -->
+        </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: Graph + details -->
+    <div class="scenario-right glass">
+
+        <h2 class="gen-title">Attack Graph</h2>
+
+        <div class="scenario-graph-wrapper">
+            <svg id="scenario_svg" class="scenario-graph" viewBox="0 0 900 550"></svg>
+        </div>
+
+<div id="scenario_details" class="scenario-details-box">
+    <h3 id="scenario_title">Select a scenario</h3>
+    <p id="scenario_desc"></p>
+
+    <div id="scenario_hosts" class="scenario-meta"></div>
+    <div id="scenario_mitre" class="scenario-meta"></div>
+
+    <h4>Phases</h4>
+    <ol id="scenario_phases" class="scenario-phase-list"></ol>
+
+    <h4>Selected Element</h4>
+    <div id="scenario_selection" class="scenario-selection-box">
+        Click a node or edge in the graph to see details.
+    </div>
+</div>
+
+        <!-- <div id="scenario_details" class="scenario-details-box">
+            <h3 id="scenario_title">Select a scenario</h3>
+            <p id="scenario_desc"></p>
+
+            <div id="scenario_hosts" class="scenario-meta"></div>
+            <div id="scenario_mitre" class="scenario-meta"></div>
+
+            <h4>Phases</h4>
+            <ol id="scenario_phases" class="scenario-phase-list"></ol>
+        </div> -->
+
+    </div>
+
+</div>
+
+<script src="/static/js/scenarios.js"></script>
+
+{% endblock %}

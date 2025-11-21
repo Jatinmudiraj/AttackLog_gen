@@ -1,0 +1,200 @@
+2025-11-03T12:13:36.066473+00:00 Ubuntu1 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="950" x-info="https://www.rsyslog.com"] rsyslogd was HUPed
+2025-11-03T12:13:36.085733+00:00 Ubuntu1 systemd[1]: logrotate.service: Deactivated successfully.
+2025-11-03T12:13:36.085818+00:00 Ubuntu1 systemd[1]: Finished logrotate.service - Rotate log files.
+2025-11-03T12:13:36.106360+00:00 Ubuntu1 snapd[895]: backends.go:68: AppArmor status: apparmor is enabled and all features are available (using snapd provided apparmor_parser)
+2025-11-03T12:13:36.250568+00:00 Ubuntu1 snapd[895]: backend.go:141: delegating reload of snap-confine profiles to system snap security profiles setup
+2025-11-03T12:13:47.443777+00:00 Ubuntu1 systemd[1]: Starting setvtrgb.service - Set console scheme...
+2025-11-03T12:13:47.459330+00:00 Ubuntu1 systemd[1]: Starting systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP...
+2025-11-03T12:13:47.463739+00:00 Ubuntu1 systemd[1]: Finished setvtrgb.service - Set console scheme.
+2025-11-03T12:13:47.467826+00:00 Ubuntu1 dbus-daemon[847]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service' requested by ':1.42' (uid=120 pid=2910 comm="/usr/bin/gnome-shell" label="unconfined")
+2025-11-03T12:13:47.468305+00:00 Ubuntu1 systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+2025-11-03T12:21:15.789423+00:00 Ubuntu1 systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+2025-11-03T12:21:15.789424+00:00 Ubuntu1 systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+2025-11-03T12:21:15.789427+00:00 Ubuntu1 systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database was skipped because of an unmet condition check (ConditionNeedsUpdate=/etc).
+2025-11-03T12:21:15.789428+00:00 Ubuntu1 systemd[1]: systemd-journal-catalog-update.service - Rebuild Journal Catalog was skipped because of an unmet condition check (ConditionNeedsUpdate=/var).
+2025-11-03T12:21:15.789430+00:00 Ubuntu1 systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+2025-11-03T12:21:15.899149+00:00 Ubuntu1 kernel: systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+2025-11-03T12:21:15.899149+00:00 Ubuntu1 kernel: systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+2025-11-03T12:21:15.899149+00:00 Ubuntu1 kernel: systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+2025-11-03T12:21:15.899149+00:00 Ubuntu1 kernel: systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+2025-11-03T12:21:15.899149+00:00 Ubuntu1 kernel: systemd-journald[247]: Collecting audit messages is disabled.
+2025-11-03T12:21:24.995256+00:00 Ubuntu1 systemd[2727]: Reached target sockets.target - Sockets.
+2025-11-03T12:21:24.995296+00:00 Ubuntu1 systemd[2727]: Reached target basic.target - Basic System.
+2025-11-03T12:21:24.995313+00:00 Ubuntu1 systemd[2727]: gnome-initial-setup-copy-worker.service - GNOME Initial Setup Copy Worker was skipped because of an unmet condition check (ConditionUser=!@system).
+2025-11-03T12:21:24.995626+00:00 Ubuntu1 systemd[1]: Started user@120.service - User Manager for UID 120.
+2025-11-03T12:21:25.004104+00:00 Ubuntu1 systemd[2727]: Started pipewire.service - PipeWire Multimedia Service.
+2025-11-03T12:21:38.660192+00:00 Ubuntu1 systemd[3221]: Reached target sockets.target - Sockets.
+2025-11-03T12:21:38.660213+00:00 Ubuntu1 systemd[3221]: Reached target basic.target - Basic System.
+2025-11-03T12:21:38.660229+00:00 Ubuntu1 systemd[3221]: gnome-initial-setup-copy-worker.service - GNOME Initial Setup Copy Worker was skipped because of an unmet condition check (ConditionPathExists=!/home/ubt5/.config/gnome-initial-setup-done).
+2025-11-03T12:21:38.660246+00:00 Ubuntu1 systemd[1]: Started user@1000.service - User Manager for UID 1000.
+2025-11-03T12:21:38.667624+00:00 Ubuntu1 systemd[3221]: Started pipewire.service - PipeWire Multimedia Service.
+2025-11-03T12:21:41.643298+00:00 Ubuntu1 systemd[3221]: Reached target org.gnome.SettingsDaemon.Sound.target - GNOME sound sample caching target.
+2025-11-03T12:21:41.648280+00:00 Ubuntu1 dbus-daemon[3251]: [session uid=1000 pid=3251] Activating service name='org.freedesktop.portal.IBus' requested by ':1.54' (uid=1000 pid=3579 comm="/usr/bin/ibus-daemon --panel disable" label="unconfined")
+2025-11-03T12:21:41.660183+00:00 Ubuntu1 systemd[3221]: Started org.freedesktop.IBus.session.GNOME.service - IBus Daemon for GNOME.
+2025-11-03T12:21:41.666154+00:00 Ubuntu1 dbus-daemon[3251]: [session uid=1000 pid=3251] Activating service name='org.gnome.OnlineAccounts' requested by ':1.37' (uid=1000 pid=3569 comm="/usr/libexec/evolution-source-registry" label="unconfined")
+2025-11-03T12:21:41.668328+00:00 Ubuntu1 evolution-source-registry[3569]: ** Failed to load key file at 'file:///home/ubt5/.config/evolution/sources/system-proxy.source': Data source is missing a [Data Source] group
+2025-11-03T12:21:44.615016+00:00 Ubuntu1 vboxclient.desktop[4115]: 12:21:44.614809 main      Daemonizing service ...
+2025-11-03T12:21:44.615696+00:00 Ubuntu1 kernel: 12:21:44.614809 main      Daemonizing service ...
+2025-11-03T12:21:44.627758+00:00 Ubuntu1 kernel: 12:21:44.626872 main      Initializing service ...
+2025-11-03T12:21:44.627816+00:00 Ubuntu1 kernel: 12:21:44.627153 main      Creating worker thread ...
+2025-11-03T12:21:44.630390+00:00 Ubuntu1 vboxclient.desktop[4148]: 12:21:44.629191 main     VBoxClient 7.2.0 r170228 (verbosity: 0) linux.amd64 (Aug 13 2025 22:11:09) release log
+2025-11-03T12:34:57.704454+00:00 Ubuntu1 PackageKit: daemon start
+2025-11-03T12:34:57.773386+00:00 Ubuntu1 dbus-daemon[847]: [system] Successfully activated service 'org.freedesktop.PackageKit'
+2025-11-03T12:34:57.774761+00:00 Ubuntu1 systemd[1]: Started packagekit.service - PackageKit Daemon.
+2025-11-03T12:35:01.754910+00:00 Ubuntu1 CRON[5602]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+2025-11-03T12:35:03.790549+00:00 Ubuntu1 rsyslogd[905]: rsyslogd: cannot connect to 192.168.10.102:514: Connection refused [v8.2312.0 try https://www.rsyslog.com/e/2027 ]
+2025-11-03T13:08:57.065438+00:00 Ubuntu1 auditd[421]: No plugins found, not dispatching events
+2025-11-03T13:08:57.065441+00:00 Ubuntu1 auditd[421]: Init complete, auditd 3.1.2 listening for events (startup state enable)
+2025-11-03T13:08:57.065446+00:00 Ubuntu1 systemd[1]: Starting systemd-resolved.service - Network Name Resolution...
+2025-11-03T13:08:57.065448+00:00 Ubuntu1 systemd[1]: systemd-update-done.service - Update is Completed was skipped because no trigger condition checks were met.
+2025-11-03T13:08:57.065451+00:00 Ubuntu1 systemd[1]: Started plymouth-start.service - Show Plymouth Boot Screen.
+2025-11-03T13:08:57.066095+00:00 Ubuntu1 dbus-daemon[866]: [system] Successfully activated service 'org.freedesktop.systemd1'
+2025-11-03T13:08:57.066098+00:00 Ubuntu1 systemd[1]: Started switcheroo-control.service - Switcheroo Control Proxy service.
+2025-11-03T13:08:57.066101+00:00 Ubuntu1 systemd[1]: Started avahi-daemon.service - Avahi mDNS/DNS-SD Stack.
+2025-11-03T13:08:57.066103+00:00 Ubuntu1 avahi-daemon[865]: Successfully called chroot().
+2025-11-03T13:08:57.066106+00:00 Ubuntu1 avahi-daemon[865]: Successfully dropped remaining capabilities.
+2025-11-03T13:08:58.934699+00:00 Ubuntu1 systemd[1]: Starting systemd-timedated.service - Time & Date Service...
+2025-11-03T13:08:58.994388+00:00 Ubuntu1 dbus-daemon[866]: [system] Successfully activated service 'org.freedesktop.timedate1'
+2025-11-03T13:08:58.995176+00:00 Ubuntu1 systemd[1]: Started systemd-timedated.service - Time & Date Service.
+2025-11-03T13:08:59.015843+00:00 Ubuntu1 systemd[1]: Finished snapd.seeded.service - Wait until snapd is fully seeded.
+2025-11-03T13:08:59.018156+00:00 Ubuntu1 systemd[1]: snapd.autoimport.service - Auto import assertions from block devices was skipped because no trigger condition checks were met.
+2025-11-03T13:09:05.748707+00:00 Ubuntu1 org.gnome.Shell.desktop[3163]: > Warning:          Could not resolve keysym XF86NavInfo
+2025-11-03T13:09:05.749988+00:00 Ubuntu1 org.gnome.Shell.desktop[3163]: Errors from xkbcomp are not fatal to the X server
+2025-11-03T13:09:05.802353+00:00 Ubuntu1 /usr/libexec/gdm-wayland-session[2781]: dbus-daemon[2781]: [session uid=120 pid=2781] Activating service name='org.freedesktop.portal.IBus' requested by ':1.36' (uid=120 pid=3149 comm="ibus-daemon --panel disable -r --xim" label="unconfined")
+2025-11-03T13:09:05.812709+00:00 Ubuntu1 spice-vdagent[3170]: vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0 does not exist, exiting
+2025-11-03T13:09:05.837801+00:00 Ubuntu1 /usr/libexec/gdm-wayland-session[2781]: dbus-daemon[2781]: [session uid=120 pid=2781] Successfully activated service 'org.freedesktop.portal.IBus'
+2025-11-03T13:40:22.197448+00:00 Ubuntu1 dbus-daemon[3415]: [session uid=1000 pid=3415] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+2025-11-03T13:40:22.197727+00:00 Ubuntu1 systemd[3350]: Started xdg-permission-store.service - sandboxed app permission store.
+2025-11-03T13:40:22.200763+00:00 Ubuntu1 dbus-daemon[3415]: [session uid=1000 pid=3415] Successfully activated service 'org.freedesktop.portal.Documents'
+2025-11-03T13:40:22.201119+00:00 Ubuntu1 systemd[3350]: Started xdg-document-portal.service - flatpak document portal service.
+2025-11-03T13:40:22.213379+00:00 Ubuntu1 xdg-document-portal[3475]: Ignoring invalid max threads value 4294967295 > max (100000).
+2025-11-07T07:54:11.076929+00:00 Ubuntu1 systemd[1]: Starting systemd-resolved.service - Network Name Resolution...
+2025-11-07T07:54:11.076930+00:00 Ubuntu1 auditd[395]: Init complete, auditd 3.1.2 listening for events (startup state enable)
+2025-11-07T07:54:11.076932+00:00 Ubuntu1 systemd[1]: systemd-update-done.service - Update is Completed was skipped because no trigger condition checks were met.
+2025-11-07T07:54:11.076935+00:00 Ubuntu1 systemd[1]: Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+2025-11-07T07:54:11.076937+00:00 Ubuntu1 systemd[1]: Starting plymouth-start.service - Show Plymouth Boot Screen...
+2025-11-07T07:54:11.082851+00:00 Ubuntu1 kernel: snd_intel8x0 0000:00:05.0: allow list rate for 1028:0177 is 48000
+2025-11-07T07:54:11.077402+00:00 Ubuntu1 systemd[1]: sssd-pac.socket: Bound to unit sssd.service, but unit isn't active.
+2025-11-07T07:54:11.087043+00:00 Ubuntu1 systemd[1]: Dependency failed for sssd-pac.socket - SSSD PAC Service responder socket.
+2025-11-07T07:54:11.087055+00:00 Ubuntu1 systemd[1]: sssd-pac.socket: Job sssd-pac.socket/start failed with result 'dependency'.
+2025-11-07T07:54:11.087058+00:00 Ubuntu1 systemd[1]: sssd-pam-priv.socket: Bound to unit sssd.service, but unit isn't active.
+2025-11-07T07:54:13.182286+00:00 Ubuntu1 NetworkManager[967]: <info>  [1762502053.1815] device (enp0s8): Activation: successful, device activated.
+2025-11-07T07:54:13.206965+00:00 Ubuntu1 systemd[1]: Starting plymouth-quit-wait.service - Hold until boot process finishes up...
+2025-11-07T07:54:13.209138+00:00 Ubuntu1 systemd[1]: snapd.autoimport.service - Auto import assertions from block devices was skipped because no trigger condition checks were met.
+2025-11-07T07:54:13.211888+00:00 Ubuntu1 NetworkManager[967]: <info>  [1762502053.2112] dhcp4 (enp0s3): state changed new lease, address=10.0.2.15
+2025-11-07T07:54:13.212746+00:00 Ubuntu1 NetworkManager[967]: <info>  [1762502053.2121] policy: set 'netplan-enp0s3' (enp0s3) as default for IPv4 routing and DNS
+2025-11-07T07:54:20.607430+00:00 Ubuntu1 org.gnome.Shell.desktop[3198]: Errors from xkbcomp are not fatal to the X server
+2025-11-07T07:54:20.706892+00:00 Ubuntu1 /usr/libexec/gdm-wayland-session[2861]: dbus-daemon[2861]: [session uid=120 pid=2861] Activating service name='org.freedesktop.portal.IBus' requested by ':1.29' (uid=120 pid=3193 comm="ibus-daemon --panel disable -r --xim" label="unconfined")
+2025-11-07T07:54:20.725533+00:00 Ubuntu1 /usr/libexec/gdm-wayland-session[2861]: dbus-daemon[2861]: [session uid=120 pid=2861] Successfully activated service 'org.freedesktop.portal.IBus'
+2025-11-07T07:54:20.768937+00:00 Ubuntu1 dbus-daemon[852]: [system] Activating via systemd: service name='org.freedesktop.GeoClue2' unit='geoclue.service' requested by ':1.44' (uid=120 pid=2900 comm="/usr/bin/gnome-shell" label="unconfined")
+2025-11-07T07:54:20.779129+00:00 Ubuntu1 systemd[1]: Starting geoclue.service - Location Lookup Service...
+2025-11-07T08:10:00.369640+00:00 Ubuntu1 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-11-07T08:10:00.386953+00:00 Ubuntu1 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-11-07T08:10:00.387473+00:00 Ubuntu1 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-11-07T08:12:15.529212+00:00 Ubuntu1 systemd[1]: Starting fwupd-refresh.service - Refresh fwupd metadata and update motd...
+2025-11-07T08:12:15.650450+00:00 Ubuntu1 dbus-daemon[852]: [system] Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.88' (uid=989 pid=4852 comm="/usr/bin/fwupdmgr refresh" label="unconfined")
+2025-11-08T15:32:52.395790+00:00 Ubuntu1 systemd[1]: modprobe@loop.service: Deactivated successfully.
+2025-11-08T15:32:52.395792+00:00 Ubuntu1 systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+2025-11-08T15:32:52.395795+00:00 Ubuntu1 systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+2025-11-08T15:32:52.395797+00:00 Ubuntu1 systemd-modules-load[265]: Inserted module 'lp'
+2025-11-08T15:32:52.395800+00:00 Ubuntu1 systemd-modules-load[265]: Inserted module 'ppdev'
+2025-11-08T15:32:52.396458+00:00 Ubuntu1 systemd[1]: sssd-autofs.socket: Job sssd-autofs.socket/start failed with result 'dependency'.
+2025-11-08T15:32:52.396461+00:00 Ubuntu1 systemd[1]: sssd-pac.socket: Bound to unit sssd.service, but unit isn't active.
+2025-11-08T15:32:52.396463+00:00 Ubuntu1 systemd[1]: Dependency failed for sssd-pac.socket - SSSD PAC Service responder socket.
+2025-11-08T15:32:52.396466+00:00 Ubuntu1 systemd[1]: sssd-pac.socket: Job sssd-pac.socket/start failed with result 'dependency'.
+2025-11-08T15:32:52.396468+00:00 Ubuntu1 systemd[1]: sssd-pam-priv.socket: Bound to unit sssd.service, but unit isn't active.
+2025-11-08T15:32:54.789008+00:00 Ubuntu1 NetworkManager[918]: <info>  [1762615974.7873] device (enp0s3): Activation: successful, device activated.
+2025-11-08T15:32:54.789040+00:00 Ubuntu1 NetworkManager[918]: <info>  [1762615974.7881] manager: startup complete
+2025-11-08T15:32:54.795522+00:00 Ubuntu1 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+2025-11-08T15:32:54.801777+00:00 Ubuntu1 systemd[1]: Finished NetworkManager-wait-online.service - Network Manager Wait Online.
+2025-11-08T15:32:54.812125+00:00 Ubuntu1 systemd[1]: Reached target network-online.target - Network is Online.
+2025-11-08T15:33:03.837979+00:00 Ubuntu1 systemd[1]: Reached target multi-user.target - Multi-User System.
+2025-11-08T15:33:03.838046+00:00 Ubuntu1 systemd[1]: Reached target graphical.target - Graphical Interface.
+2025-11-08T15:33:03.844223+00:00 Ubuntu1 systemd[1]: Starting setvtrgb.service - Set console scheme...
+2025-11-08T15:33:03.855749+00:00 Ubuntu1 systemd[1]: Starting systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP...
+2025-11-08T15:33:03.856927+00:00 Ubuntu1 systemd[1]: Finished setvtrgb.service - Set console scheme.
+2025-11-08T15:41:25.060587+00:00 Ubuntu1 dbus-daemon[9205]: [session uid=1000 pid=9205] Activating via systemd: service name='org.freedesktop.portal.Documents' unit='xdg-document-portal.service' requested by ':1.30' (uid=1000 pid=9191 comm="/usr/bin/snap run snapd-desktop-integration" label="unconfined")
+2025-11-08T15:41:25.070384+00:00 Ubuntu1 systemd[9176]: Starting xdg-document-portal.service - flatpak document portal service...
+2025-11-08T15:41:25.077338+00:00 Ubuntu1 dbus-daemon[9205]: [session uid=1000 pid=9205] Activating via systemd: service name='org.freedesktop.impl.portal.PermissionStore' unit='xdg-permission-store.service' requested by ':1.31' (uid=1000 pid=9403 comm="/usr/libexec/xdg-document-portal" label="unconfined")
+2025-11-08T15:41:25.088068+00:00 Ubuntu1 rtkit-daemon[2786]: Supervising 15 threads of 9 processes of 2 users.
+2025-11-08T15:41:25.089664+00:00 Ubuntu1 rtkit-daemon[2786]: Supervising 15 threads of 9 processes of 2 users.
+2025-11-08T15:41:26.665583+00:00 Ubuntu1 systemd[9176]: Started gvfs-gphoto2-volume-monitor.service - Virtual filesystem service - digital camera monitor.
+2025-11-08T15:41:26.667891+00:00 Ubuntu1 dbus-daemon[9205]: [session uid=1000 pid=9205] Activating via systemd: service name='org.gtk.vfs.GoaVolumeMonitor' unit='gvfs-goa-volume-monitor.service' requested by ':1.29' (uid=1000 pid=9371 comm="/usr/bin/gnome-shell" label="unconfined")
+2025-11-08T15:41:26.675839+00:00 Ubuntu1 systemd[9176]: Starting gvfs-goa-volume-monitor.service - Virtual filesystem service - GNOME Online Accounts monitor...
+2025-11-08T15:41:26.679050+00:00 Ubuntu1 dbus-daemon[9205]: [session uid=1000 pid=9205] Successfully activated service 'org.gnome.evolution.dataserver.Calendar8'
+2025-11-08T15:41:26.679152+00:00 Ubuntu1 systemd[9176]: Started evolution-calendar-factory.service - Evolution calendar service.
+2025-11-08T15:42:50.229671+00:00 Ubuntu1 systemd-modules-load[261]: Inserted module 'msr'
+2025-11-08T15:42:50.229674+00:00 Ubuntu1 systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+2025-11-08T15:42:50.229677+00:00 Ubuntu1 systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+2025-11-08T15:42:50.229680+00:00 Ubuntu1 systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+2025-11-08T15:42:50.229683+00:00 Ubuntu1 systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+2025-11-08T15:42:50.230361+00:00 Ubuntu1 systemd[1]: getty-static.service - getty on tty2-tty6 if dbus and logind are not available was skipped because of an unmet condition check (ConditionPathExists=!/usr/bin/dbus-daemon).
+2025-11-08T15:42:50.230364+00:00 Ubuntu1 systemd[1]: Reached target getty.target - Login Prompts.
+2025-11-08T15:42:50.230367+00:00 Ubuntu1 systemd[1]: Starting gnome-remote-desktop.service - GNOME Remote Desktop...
+2025-11-08T15:42:50.230369+00:00 Ubuntu1 systemd[1]: Starting gpu-manager.service - Detect the available GPUs and deal with any system changes...
+2025-11-08T15:42:50.230374+00:00 Ubuntu1 avahi-daemon[864]: Found user 'avahi' (UID 108) and group 'avahi' (GID 111).
+2025-11-08T15:42:50.234741+00:00 Ubuntu1 kernel: systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+2025-11-08T15:42:50.234743+00:00 Ubuntu1 kernel: systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+2025-11-08T15:42:50.234744+00:00 Ubuntu1 kernel: systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+2025-11-08T15:42:50.234744+00:00 Ubuntu1 kernel: systemd[1]: modprobe@fuse.service: Deactivated successfully.
+2025-11-08T15:42:50.234745+00:00 Ubuntu1 kernel: systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+2025-11-08T15:42:58.610969+00:00 Ubuntu1 wireplumber[2757]: PipeWire's libcamera SPA missing or broken. libcamera not supported.
+2025-11-08T15:42:58.621132+00:00 Ubuntu1 /usr/libexec/gdm-wayland-session[2776]: dbus-daemon[2776]: [session uid=120 pid=2776] Activating service name='org.freedesktop.systemd1' requested by ':1.2' (uid=120 pid=2783 comm="/usr/libexec/gnome-session-binary --autostart /usr" label="unconfined")
+2025-11-08T15:42:58.623219+00:00 Ubuntu1 /usr/libexec/gdm-wayland-session[2776]: dbus-daemon[2776]: [session uid=120 pid=2776] Activated service 'org.freedesktop.systemd1' failed: Process org.freedesktop.systemd1 exited with status 1
+2025-11-08T15:42:58.623589+00:00 Ubuntu1 gnome-session[2783]: gnome-session-binary[2783]: WARNING: Could not check if unit gnome-session-wayland@gnome-login.target is active: Error calling StartServiceByName for org.freedesktop.systemd1: Process org.freedesktop.systemd1 exited with status 1
+2025-11-08T15:42:58.623752+00:00 Ubuntu1 gnome-session-binary[2783]: WARNING: Could not check if unit gnome-session-wayland@gnome-login.target is active: Error calling StartServiceByName for org.freedesktop.systemd1: Process org.freedesktop.systemd1 exited with status 1
+2025-11-08T15:43:36.365903+00:00 Ubuntu1 kernel: rfkill: input handler enabled
+2025-11-08T15:43:36.369216+00:00 Ubuntu1 wireplumber[3284]: BlueZ system service is not available
+2025-11-08T15:43:36.373860+00:00 Ubuntu1 systemd[3258]: Starting xdg-document-portal.service - flatpak document portal service...
+2025-11-08T15:43:36.376788+00:00 Ubuntu1 rtkit-daemon[2774]: Successfully made thread 3344 of process 3285 owned by '1000' RT at priority 20.
+2025-11-08T15:43:36.377050+00:00 Ubuntu1 rtkit-daemon[2774]: Supervising 15 threads of 9 processes of 2 users.
+2025-11-08T15:43:38.212350+00:00 Ubuntu1 gnome-shell[3755]: VMware: No 3D enabled (0, Success).
+2025-11-08T15:43:38.213592+00:00 Ubuntu1 gnome-shell[3755]: libEGL warning: egl: failed to create dri2 screen
+2025-11-08T15:43:38.215961+00:00 Ubuntu1 dbus-daemon[3287]: [session uid=1000 pid=3287] Activating service name='org.gnome.Identity' requested by ':1.59' (uid=1000 pid=3854 comm="/usr/libexec/goa-daemon" label="unconfined")
+2025-11-08T15:43:38.222217+00:00 Ubuntu1 dbus-daemon[3287]: [session uid=1000 pid=3287] Successfully activated service 'org.gnome.OnlineAccounts'
+2025-11-08T15:43:38.233191+00:00 Ubuntu1 dbus-daemon[3287]: [session uid=1000 pid=3287] Successfully activated service 'org.gtk.vfs.UDisks2VolumeMonitor'
+2025-11-08T15:43:40.233902+00:00 Ubuntu1 dbus-daemon[3287]: [session uid=1000 pid=3287] Activating via systemd: service name='org.freedesktop.impl.portal.desktop.gtk' unit='xdg-desktop-portal-gtk.service' requested by ':1.74' (uid=1000 pid=4010 comm="/usr/libexec/xdg-desktop-portal" label="unconfined")
+2025-11-08T15:43:40.253089+00:00 Ubuntu1 systemd[3258]: Starting xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation)...
+2025-11-08T15:43:40.283767+00:00 Ubuntu1 dbus-daemon[3287]: [session uid=1000 pid=3287] Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service' requested by ':1.81' (uid=1000 pid=4063 comm="gjs /usr/share/gnome-shell/extensions/ding@rasters" label="desktop-icons-ng (unconfined)")
+2025-11-08T15:43:40.289172+00:00 Ubuntu1 systemd[3258]: Starting gvfs-metadata.service - Virtual filesystem metadata service...
+2025-11-08T15:43:40.308432+00:00 Ubuntu1 dbus-daemon[3287]: [session uid=1000 pid=3287] Successfully activated service 'org.gtk.vfs.Metadata'
+2025-11-08T16:10:01.039861+00:00 Ubuntu1 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-11-08T16:10:01.154526+00:00 Ubuntu1 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-11-08T16:10:01.155217+00:00 Ubuntu1 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-11-08T16:12:23.778558+00:00 Ubuntu1 kernel: 16:12:23.775517 SHCLX11   Shared Clipboard: Reading clipboard data in format 0x1 from host failed with VERR_SHCLPB_NO_DATA
+2025-11-08T16:12:23.781156+00:00 Ubuntu1 kernel: 16:12:23.778291 SHCLX11   Shared Clipboard: Requesting data in format 0x1 from host failed with VERR_SHCLPB_NO_DATA
+2025-11-08T16:57:52.979596+00:00 Ubuntu1 NetworkManager[928]: <info>  [1762621072.9770] dhcp4 (enp0s8): state changed new lease, address=192.168.43.5
+2025-11-08T16:57:52.984138+00:00 Ubuntu1 dbus-daemon[865]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.15' (uid=0 pid=928 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+2025-11-08T16:57:53.017470+00:00 Ubuntu1 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+2025-11-08T16:57:53.037000+00:00 Ubuntu1 dbus-daemon[865]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+2025-11-08T16:57:53.037225+00:00 Ubuntu1 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+2025-11-08T17:45:22.135344+00:00 Ubuntu1 rsyslogd[946]: rsyslogd: cannot connect to 192.168.10.102:514: Connection refused [v8.2312.0 try https://www.rsyslog.com/e/2027 ]
+2025-11-08T17:47:53.067234+00:00 Ubuntu1 NetworkManager[928]: <info>  [1762624073.0652] dhcp4 (enp0s8): state changed new lease, address=192.168.43.5
+2025-11-08T17:47:53.076817+00:00 Ubuntu1 dbus-daemon[865]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.15' (uid=0 pid=928 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+2025-11-08T17:47:53.118043+00:00 Ubuntu1 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+2025-11-08T17:47:53.138286+00:00 Ubuntu1 dbus-daemon[865]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+2025-11-08T18:40:03.346436+00:00 Ubuntu1 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2025-11-08T18:40:03.491414+00:00 Ubuntu1 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2025-11-08T18:40:03.492421+00:00 Ubuntu1 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2025-11-08T18:40:24.355902+00:00 Ubuntu1 rsyslogd[946]: rsyslogd: cannot connect to 192.168.10.102:514: Connection refused [v8.2312.0 try https://www.rsyslog.com/e/2027 ]
+2025-11-08T18:42:53.251097+00:00 Ubuntu1 NetworkManager[928]: <info>  [1762627373.2493] dhcp4 (enp0s8): state changed new lease, address=192.168.43.5
+2025-11-08T19:47:53.477212+00:00 Ubuntu1 NetworkManager[928]: <info>  [1762631273.4761] dhcp4 (enp0s8): state changed new lease, address=192.168.43.5
+2025-11-08T19:47:53.481878+00:00 Ubuntu1 dbus-daemon[865]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.15' (uid=0 pid=928 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+2025-11-08T19:47:53.498356+00:00 Ubuntu1 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+2025-11-08T19:47:53.511978+00:00 Ubuntu1 dbus-daemon[865]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+2025-11-08T19:47:53.513639+00:00 Ubuntu1 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+2025-11-08T20:50:26.040625+00:00 Ubuntu1 rsyslogd[946]: rsyslogd: cannot connect to 192.168.10.102:514: Connection refused [v8.2312.0 try https://www.rsyslog.com/e/2027 ]
+2025-11-08T20:52:53.647228+00:00 Ubuntu1 NetworkManager[928]: <info>  [1762635173.6463] dhcp4 (enp0s8): state changed new lease, address=192.168.43.5
+2025-11-08T20:52:53.652501+00:00 Ubuntu1 dbus-daemon[865]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.15' (uid=0 pid=928 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+2025-11-08T20:52:53.663863+00:00 Ubuntu1 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+2025-11-08T20:52:53.953953+00:00 Ubuntu1 dbus-daemon[865]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+2025-11-08T21:52:53.785367+00:00 Ubuntu1 NetworkManager[928]: <info>  [1762638773.7846] dhcp4 (enp0s8): state changed new lease, address=192.168.43.5
+2025-11-08T21:52:53.792104+00:00 Ubuntu1 dbus-daemon[865]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.15' (uid=0 pid=928 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+2025-11-08T21:52:53.805977+00:00 Ubuntu1 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+2025-11-08T21:52:53.981273+00:00 Ubuntu1 dbus-daemon[865]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+2025-11-08T21:52:53.983278+00:00 Ubuntu1 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+2025-11-08T22:57:53.986166+00:00 Ubuntu1 NetworkManager[928]: <info>  [1762642673.9835] dhcp4 (enp0s8): state changed new lease, address=192.168.43.5
+2025-11-08T22:57:53.995450+00:00 Ubuntu1 dbus-daemon[865]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.15' (uid=0 pid=928 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+2025-11-08T22:57:54.000942+00:00 Ubuntu1 systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+2025-11-08T22:57:54.014226+00:00 Ubuntu1 dbus-daemon[865]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+2025-11-08T22:57:54.015193+00:00 Ubuntu1 systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.

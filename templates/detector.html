@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-heading">
+    <h1>Technique Detector</h1>
+    <p class="subtext">Detect MITRE ATT&CK techniques from log files.</p>
+</div>
+
+<div class="detector-container">
+
+    <!-- LEFT PANEL -->
+    <div class="detector-left glass">
+
+        <h2 class="gen-title">Detection Settings</h2>
+
+        <div class="form-grid">
+
+            <!-- Input Log File -->
+            <div class="form-block full-width">
+                <label>Select Log File</label>
+                <select id="det_file" class="input-lg full-width">
+                    <option value="">-- Select a log file --</option>
+                </select>
+            </div>
+
+            <!-- Detection Mode -->
+            <div class="form-block full-width">
+                <label>Detection Mode</label>
+                <select id="det_mode" class="input-lg full-width">
+                    <option value="rule">Rule-Based Detection</option>
+                    <option value="ml">ML Classifier (joblib)</option>
+                </select>
+            </div>
+
+            <!-- Classifier Path -->
+            <div class="form-block full-width">
+                <label>Classifier (joblib)</label>
+                <input id="clf_path" class="input-lg" placeholder="mitre_clf.joblib">
+            </div>
+
+        </div>
+
+        <button id="detect_btn" class="generate-btn-xl" onclick="runDetection()">
+            🔍 Run Detection
+        </button>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="detector-right glass">
+
+        <div class="console-header">
+            <span class="green-dot"></span>
+            Detection Output
+        </div>
+
+        <div id="det_results" class="detector-results-box">
+            Select a log file and run detection to see results.
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/js/detector.js"></script>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-heading">
+    <h1>Advanced SSH Log Generator</h1>
+    <p class="subtext">Configure parameters and generate high-fidelity system logs.</p>
+</div>
+
+<div class="gen-container">
+
+    <!-- LEFT PANEL -->
+    <div class="gen-left glass">
+
+        <!-- FILE CONFIG -->
+        <h2 class="gen-title">File Configuration</h2>
+
+        <div class="form-grid">
+
+            <!-- Prompt file -->
+            <div class="form-block full-width">
+                <label>Prompt File (Original Logs)</label>
+                <select id="prompt_file" class="input-lg"></select>
+            </div>
+
+            <!-- Scenario prompt template -->
+            <div class="form-block full-width">
+                <label>Scenario Prompt (Template)</label>
+                <select id="scenario_prompt" class="input-lg"></select>
+            </div>
+
+            <!-- Output file -->
+            <div class="form-block full-width">
+                <label>Output File</label>
+                <input id="output_file" class="input-lg"
+                       placeholder="system_logs/.../generated_logs.txt">
+            </div>
+
+        </div>
+
+        <!-- GENERATION SETTINGS -->
+        <h2 class="gen-title">Generation Settings</h2>
+
+        <div class="form-grid">
+
+            <div class="form-block">
+                <label>Temperature</label>
+                <input id="temp" type="number" step="0.1" class="input-lg" value="0.7">
+            </div>
+
+            <div class="form-block">
+                <label>Top-P</label>
+                <input id="top_p" type="number" step="0.05" class="input-lg" value="0.95">
+            </div>
+
+            <div class="form-block">
+                <label>Max Tokens</label>
+                <input id="max_tok" type="number" class="input-lg" value="400">
+            </div>
+
+            <div class="form-block">
+                <label>Lines to Generate</label>
+                <input id="num_lines" type="number" class="input-lg" value="200">
+            </div>
+
+            <div class="form-block">
+                <label>Noise (%)</label>
+                <input id="noise" type="number" class="input-lg" value="3">
+            </div>
+
+            <div class="form-block">
+                <label>Seed</label>
+                <input id="seed" type="number" class="input-lg" value="42">
+            </div>
+
+        </div>
+
+        <!-- CONTEXT SETTINGS -->
+        <h2 class="gen-title">Context Settings</h2>
+
+        <div class="form-grid">
+
+            <div class="form-block">
+                <label>Hostname</label>
+                <input id="hostname" class="input-lg" value="LabSZ">
+            </div>
+
+            <div class="form-block">
+                <label>Log Type</label>
+                <select id="log_type" class="input-lg">
+                    <option>SSH</option>
+                    <option>Apache</option>
+                    <option>Systemd</option>
+                </select>
+            </div>
+
+            <div class="form-block">
+                <label>IP Range</label>
+                <input id="ip_range" class="input-lg" placeholder="192.168.1.1 - 192.168.1.255">
+            </div>
+
+            <div class="form-block">
+                <label>PID Range</label>
+                <input id="pid_range" class="input-lg" placeholder="1000 - 99999">
+            </div>
+
+            <div class="form-block full-width">
+                <label>Date Range</label>
+                <input id="date_range" class="input-lg" placeholder="Dec 10 - Dec 12">
+            </div>
+
+        </div>
+
+        <button id="generate_btn" class="generate-btn-xl" onclick="generate()">
+            ⚡ Generate Logs
+        </button>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="gen-right glass">
+
+        <div class="console-header">
+            <span class="green-dot"></span>
+            Log Preview Console
+            <span id="log_count" class="console-meta">0 lines</span>
+        </div>
+
+        <div class="console-toolbar">
+            <button onclick="copyLogs()">Copy</button>
+            <button onclick="downloadLogs()">Download</button>
+            <button onclick="clearLogs()">Clear</button>
+        </div>
+
+        <pre id="preview" class="console-box"></pre>
+
+    </div>
+
+</div>
+
+<script src="/static/js/generator.js"></script>
+
+{% endblock %}

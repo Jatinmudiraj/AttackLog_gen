@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-heading">
+    <h1>MITRE ATT&CK Mapping</h1>
+    <p class="subtext">Explore techniques and attack behaviors visually.</p>
+</div>
+
+<div class="mitre-container">
+
+    <!-- LEFT SIDE -->
+    <div class="mitre-left glass">
+        <h2 class="gen-title">Technique Library</h2>
+
+        <input id="mitre_search"
+               class="input-lg mitre-search"
+               placeholder="Search technique..."
+               onkeyup="filterTechniques()">
+
+        <div id="mitre_list" class="mitre-list"></div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="mitre-right glass">
+        <h2 class="gen-title">Technique Details</h2>
+
+        <div class="mitre-graph-wrapper">
+            <svg id="mitre_svg" class="mitre-graph" viewBox="0 0 900 400"></svg>
+        </div>
+
+        <div id="mitre_details" class="mitre-details-box">
+            <h3>Select a technique from the left...</h3>
+        </div>
+    </div>
+
+</div>
+
+<!-- FIX: Add js-yaml parser -->
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+<!-- Your script -->
+<script src="/static/js/mitre.js"></script>
+
+{% endblock %}

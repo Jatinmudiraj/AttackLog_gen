@@ -1,0 +1,200 @@
+2025-11-09T01:12:45.123456+00:00 LabSZ sshd[12345]: Accepted password for user1 from 192.168.20.10 port 54321 ssh2
+2025-11-09T01:12:45.123789+00:00 LabSZ sshd[12345]: pam_unix(sshd:session): session opened for user user1(uid=1001) by user1(uid=1001)
+2025-11-09T01:15:01.123456+00:00 LabSZ sshd[12346]: Accepted password for user2 from 192.168.20.20 port 54322 ssh2
+2025-11-09T01:15:01.123789+00:00 LabSZ sshd[12346]: pam_unix(sshd:session): session opened for user user2(uid=1002) by user2(uid=1002)
+2025-11-09T01:20:01.123456+00:00 LabSZ sshd[12347]: Failed password for invalid user fakeuser from 192.168.20.30 port 54323 ssh2
+2025-11-09T01:20:01.123789+00:00 LabSZ sshd[12347]: Disconnecting invalid user fakeuser 192.168.20.30 port 54323: Too many authentication failures [preauth]
+2025-11-09T01:25:01.123456+00:00 LabSZ sshd[12348]: Accepted password for user3 from 192.168.20.40 port 54324 ssh2
+2025-11-09T01:25:01.123789+00:00 LabSZ sshd[12348]: pam_unix(sshd:session): session opened for user user3(uid=1003) by user3(uid=1003)
+2025-11-09T01:30:01.123456+00:00 LabSZ sshd[12349]: Failed password for invalid user anotherfake from 192.168.20.50 port 54325 ssh2
+2025-11-09T01:30:01.123789+00:00 LabSZ sshd[12349]: Disconnecting invalid user anotherfake 192.168.20.50 port 54325: Too many authentication failures [preauth]
+2025-11-09T01:35:01.123456+00:00 LabSZ sshd[12350]: Accepted password for user4 from 192.168.20.60 port 54326 ssh2
+2025-11-09T01:35:01.123789+00:00 LabSZ sshd[12350]: pam_unix(sshd:session): session opened for user user4(uid=1004) by user4(uid=1004)
+2025-11-09T01:40:01.123456+00:00 LabSZ sshd[12351]: Accepted password for user5 from 192.168.20.70 port 54327 ssh2
+2025-11-09T01:40:01.123789+00:00 LabSZ sshd[12351]: pam_unix(sshd:session): session opened for user user5(uid=1005) by user5(uid=1005)
+2025-11-09T01:45:01.123456+00:00 LabSZ sshd[12352]: Failed password for invalid user notarealuser from 192.168.20.80 port 54328 ssh2
+2025-11-09T01:45:01.123789+00:00 LabSZ sshd[12352]: Disconnecting invalid user notarealuser 192.168.20.80 port 54328: Too many authentication failures [preauth]
+2025-11-09T01:50:01.123456+00:00 LabSZ sshd[12353]: Accepted password for user6 from 192.168.20.90 port 54329 ssh2
+2025-11-09T01:50:01.123789+00:00 LabSZ sshd[12353]: pam_unix(sshd:session): session opened for user user6(uid=1006) by user6(uid=1006)
+2025-11-09T01:55:01.123456+00:00 LabSZ sshd[12354]: Accepted password for user7 from 192.168.20.100 port 54330 ssh2
+2025-11-09T01:55:01.123789+00:00 LabSZ sshd[12354]: pam_unix(sshd:session): session opened for user user7(uid=1007) by user7(uid=1007)
+2025-11-09T02:00:01.123456+00:00 LabSZ sshd[12355]: Failed password for invalid user fakeuser2 from 192.168.20.110 port 54331 ssh2
+2025-11-09T02:00:01.123789+00:00 LabSZ sshd[12355]: Disconnecting invalid user fakeuser2 192.168.20.110 port 54331: Too many authentication failures [preauth]
+2025-11-09T02:05:01.123456+00:00 LabSZ sshd[12356]: Accepted password for user8 from 192.168.20.120 port 54332 ssh2
+2025-11-09T02:05:01.123789+00:00 LabSZ sshd[12356]: pam_unix(sshd:session): session opened for user user8(uid=1008) by user8(uid=1008)
+2025-11-09T02:10:01.123456+00:00 LabSZ sshd[12357]: Accepted password for user9 from 192.168.20.130 port 54333 ssh2
+2025-11-09T02:10:01.123789+00:00 LabSZ sshd[12357]: pam_unix(sshd:session): session opened for user user9(uid=1009) by user9(uid=1009)
+2025-11-09T02:15:01.123456+00:00 LabSZ sshd[12358]: Failed password for invalid user fakeuser3 from 192.168.20.140 port 54334 ssh2
+2025-11-09T02:15:01.123789+00:00 LabSZ sshd[12358]: Disconnecting invalid user fakeuser3 192.168.20.140 port 54334: Too many authentication failures [preauth]
+2025-11-09T02:20:01.123456+00:00 LabSZ sshd[12359]: Accepted password for user10 from 192.168.20.150 port 54335 ssh2
+2025-11-09T02:20:01.123789+00:00 LabSZ sshd[12359]: pam_unix(sshd:session): session opened for user user10(uid=1010) by user10(uid=1010)
+2025-11-09T02:25:01.123456+00:00 LabSZ sshd[12360]: Accepted password for user11 from 192.168.20.160 port 54336 ssh2
+2025-11-09T02:25:01.123789+00:00 LabSZ sshd[12360]: pam_unix(sshd:session): session opened for user user11(uid=1011) by user11(uid=1011)
+2025-11-09T02:30:01.123456+00:00 LabSZ sshd[12361]: Failed password for invalid user fakeuser4 from 192.168.20.170 port 54337 ssh2
+2025-11-09T02:30:01.123789+00:00 LabSZ sshd[12361]: Disconnecting invalid user fakeuser4 192.168.20.170 port 54337: Too many authentication failures [preauth]
+2025-11-09T02:35:01.123456+00:00 LabSZ sshd[12362]: Accepted password for user12 from 192.168.20.180 port 54338 ssh2
+2025-11-09T02:35:01.123789+00:00 LabSZ sshd[12362]: pam_unix(sshd:session): session opened for user user12(uid=1012) by user12(uid=1012)
+2025-11-09T02:40:01.123456+00:00 LabSZ sshd[12363]: Accepted password for user13 from 192.168.20.190 port 54339 ssh2
+2025-11-09T02:40:01.123789+00:00 LabSZ sshd[12363]: pam_unix(sshd:session): session opened for user user13(uid=1013) by user13(uid=1013)
+2025-11-09T02:45:01.123456+00:00 LabSZ sshd[12364]: Failed password for invalid user fakeuser5 from 192.168.20.200 port 54340 ssh2
+2025-11-09T02:45:01.123789+00:00 LabSZ sshd[12364]: Disconnecting invalid user fakeuser5 192.168.20.200 port 54340: Too many authentication failures [preauth]
+2025-11-09T02:50:01.123456+00:00 LabSZ sshd[12365]: Accepted password for user14 from 192.168.20.210 port 54341 ssh2
+2025-11-09T02:50:01.123789+00:00 LabSZ sshd[12365]: pam_unix(sshd:session): session opened for user user14(uid=1014) by user14(uid=1014)
+2025-11-09T02:55:01.123456+00:00 LabSZ sshd[12366]: Accepted password for user15 from 192.168.20.220 port 54342 ssh2
+2025-11-09T02:55:01.123789+00:00 LabSZ sshd[12366]: pam_unix(sshd:session): session opened for user user15(uid=1015) by user15(uid=1015)
+2025-11-09T03:00:01.123456+00:00 LabSZ sshd[12367]: Failed password for invalid user fakeuser6 from 192.168.20.230 port 54343 ssh2
+2025-11-09T03:00:01.123789+00:00 LabSZ sshd[12367]: Disconnecting invalid user fakeuser6 192.168.20.230 port 54343: Too many authentication failures [preauth]
+2025-11-09T03:05:01.123456+00:00 LabSZ sshd[12368]: Accepted password for user16 from 192.168.20.240 port 54344 ssh2
+2025-11-09T03:05:01.123789+00:00 LabSZ sshd[12368]: pam_unix(sshd:session): session opened for user user16(uid=1016) by user16(uid=1016)
+2025-11-09T03:10:01.123456+00:00 LabSZ sshd[12369]: Accepted password for user17 from 192.168.20.250 port 54345 ssh2
+2025-11-09T03:10:01.123789+00:00 LabSZ sshd[12369]: pam_unix(sshd:session): session opened for user user17(uid=1017) by user17(uid=1017)
+2025-11-09T03:15:01.123456+00:00 LabSZ sshd[12370]: Failed password for invalid user fakeuser7 from 192.168.20.255 port 54346 ssh2
+2025-11-09T03:15:01.123789+00:00 LabSZ sshd[12370]: Disconnecting invalid user fakeuser7 192.168.20.255 port 54346: Too many authentication failures [preauth]
+2025-11-09T03:20:01.123456+00:00 LabSZ sshd[12371]: Accepted password for user18 from 192.168.20.1 port 54347 ssh2
+2025-11-09T03:20:01.123789+00:00 LabSZ sshd[12371]: pam_unix(sshd:session): session opened for user user18(uid=1018) by user18(uid=1018)
+2025-11-09T03:25:01.123456+00:00 LabSZ sshd[12372]: Accepted password for user19 from 192.168.20.2 port 54348 ssh2
+2025-11-09T03:25:01.123789+00:00 LabSZ sshd[12372]: pam_unix(sshd:session): session opened for user user19(uid=1019) by user19(uid=1019)
+2025-11-09T03:30:01.123456+00:00 LabSZ sshd[12373]: Failed password for invalid user fakeuser8 from 192.168.20.3 port 54349 ssh2
+2025-11-09T03:30:01.123789+00:00 LabSZ sshd[12373]: Disconnecting invalid user fakeuser8 192.168.20.3 port 54349: Too many authentication failures [preauth]
+2025-11-09T03:35:01.123456+00:00 LabSZ sshd[12374]: Accepted password for user20 from 192.168.20.4 port 54350 ssh2
+2025-11-09T03:35:01.123789+00:00 LabSZ sshd[12374]: pam_unix(sshd:session): session opened for user user20(uid=1020) by user20(uid=1020)
+2025-11-09T03:40:01.123456+00:00 LabSZ sshd[12375]: Accepted password for user21 from 192.168.20.5 port 54351 ssh2
+2025-11-09T03:40:01.123789+00:00 LabSZ sshd[12375]: pam_unix(sshd:session): session opened for user user21(uid=1021) by user21(uid=1021)
+2025-11-09T03:45:01.123456+00:00 LabSZ sshd[12376]: Failed password for invalid user fakeuser9 from 192.168.20.6 port 54352 ssh2
+2025-11-09T03:45:01.123789+00:00 LabSZ sshd[12376]: Disconnecting invalid user fakeuser9 192.168.20.6 port 54352: Too many authentication failures [preauth]
+2025-11-09T03:50:01.123456+00:00 LabSZ sshd[12377]: Accepted password for user22 from 192.168.20.7 port 54353 ssh2
+2025-11-09T03:50:01.123789+00:00 LabSZ sshd[12377]: pam_unix(sshd:session): session opened for user user22(uid=1022) by user22(uid=1022)
+2025-11-09T03:55:01.123456+00:00 LabSZ sshd[12378]: Accepted password for user23 from 192.168.20.8 port 54354 ssh2
+2025-11-09T03:55:01.123789+00:00 LabSZ sshd[12378]: pam_unix(sshd:session): session opened for user user23(uid=1023) by user23(uid=1023)
+2025-11-09T04:00:01.123456+00:00 LabSZ sshd[12379]: Failed password for invalid user fakeuser10 from 192.168.20.9 port 54355 ssh2
+2025-11-09T04:00:01.123789+00:00 LabSZ sshd[12379]: Disconnecting invalid user fakeuser10 192.168.20.9 port 54355: Too many authentication failures [preauth]
+2025-11-09T04:05:01.123456+00:00 LabSZ sshd[12380]: Accepted password for user24 from 192.168.20.11 port 54356 ssh2
+2025-11-09T04:05:01.123789+00:00 LabSZ sshd[12380]: pam_unix(sshd:session): session opened for user user24(uid=1024) by user24(uid=1024)
+2025-11-09T04:10:01.123456+00:00 LabSZ sshd[12381]: Accepted password for user25 from 192.168.20.12 port 54357 ssh2
+2025-11-09T04:10:01.123789+00:00 LabSZ sshd[12381]: pam_unix(sshd:session): session opened for user user25(uid=1025) by user25(uid=1025)
+2025-11-09T04:15:01.123456+00:00 LabSZ sshd[12382]: Failed password for invalid user fakeuser11 from 192.168.20.13 port 54358 ssh2
+2025-11-09T04:15:01.123789+00:00 LabSZ sshd[12382]: Disconnecting invalid user fakeuser11 192.168.20.13 port 54358: Too many authentication failures [preauth]
+2025-11-09T04:20:01.123456+00:00 LabSZ sshd[12383]: Accepted password for user26 from 192.168.20.14 port 54359 ssh2
+2025-11-09T04:20:01.123789+00:00 LabSZ sshd[12383]: pam_unix(sshd:session): session opened for user user26(uid=1026) by user26(uid=1026)
+2025-11-09T04:25:01.123456+00:00 LabSZ sshd[12384]: Accepted password for user27 from 192.168.20.15 port 54360 ssh2
+2025-11-09T04:25:01.123789+00:00 LabSZ sshd[12384]: pam_unix(sshd:session): session opened for user user27(uid=1027) by user27(uid=1027)
+2025-11-09T04:30:01.123456+00:00 LabSZ sshd[12385]: Failed password for invalid user fakeuser12 from 192.168.20.16 port 54361 ssh2
+2025-11-09T04:30:01.123789+00:00 LabSZ sshd[12385]: Disconnecting invalid user fakeuser12 192.168.20.16 port 54361: Too many authentication failures [preauth]
+2025-11-09T04:35:01.123456+00:00 LabSZ sshd[12386]: Accepted password for user28 from 192.168.20.17 port 54362 ssh2
+2025-11-09T04:35:01.123789+00:00 LabSZ sshd[12386]: pam_unix(sshd:session): session opened for user user28(uid=1028) by user28(uid=1028)
+2025-11-09T04:40:01.123456+00:00 LabSZ sshd[12387]: Accepted password for user29 from 192.168.20.18 port 54363 ssh2
+2025-11-09T04:40:01.123789+00:00 LabSZ sshd[12387]: pam_unix(sshd:session): session opened for user user29(uid=1029) by user29(uid=1029)
+2025-11-09T04:45:01.123456+00:00 LabSZ sshd[12388]: Failed password for invalid user fakeuser13 from 192.168.20.19 port 54364 ssh2
+2025-11-09T04:45:01.123789+00:00 LabSZ sshd[12388]: Disconnecting invalid user fakeuser13 192.168.20.19 port 54364: Too many authentication failures [preauth]
+2025-11-09T04:50:01.123456+00:00 LabSZ sshd[12389]: Accepted password for user30 from 192.168.20.20 port 54365 ssh2
+2025-11-09T04:50:01.123789+00:00 LabSZ sshd[12389]: pam_unix(sshd:session): session opened for user user30(uid=1030) by user30(uid=1030)
+2025-11-09T04:55:01.123456+00:00 LabSZ sshd[12390]: Accepted password for user31 from 192.168.20.21 port 54366 ssh2
+2025-11-09T04:55:01.123789+00:00 LabSZ sshd[12390]: pam_unix(sshd:session): session opened for user user31(uid=1031) by user31(uid=1031)
+2025-11-09T05:00:01.123456+00:00 LabSZ sshd[12391]: Failed password for invalid user fakeuser14 from 192.168.20.22 port 54367 ssh2
+2025-11-09T05:00:01.123789+00:00 LabSZ sshd[12391]: Disconnecting invalid user fakeuser14 192.168.20.22 port 54367: Too many authentication failures [preauth]
+2025-11-09T05:05:01.123456+00:00 LabSZ sshd[12392]: Accepted password for user32 from 192.168.20.23 port 54368 ssh2
+2025-11-09T05:05:01.123789+00:00 LabSZ sshd[12392]: pam_unix(sshd:session): session opened for user user32(uid=1032) by user32(uid=1032)
+2025-11-09T05:10:01.123456+00:00 LabSZ sshd[12393]: Accepted password for user33 from 192.168.20.24 port 54369 ssh2
+2025-11-09T05:10:01.123789+00:00 LabSZ sshd[12393]: pam_unix(sshd:session): session opened for user user33(uid=1033) by user33(uid=1033)
+2025-11-09T05:15:01.123456+00:00 LabSZ sshd[12394]: Failed password for invalid user fakeuser15 from 192.168.20.25 port 54370 ssh2
+2025-11-09T05:15:01.123789+00:00 LabSZ sshd[12394]: Disconnecting invalid user fakeuser15 192.168.20.25 port 54370: Too many authentication failures [preauth]
+2025-11-09T05:20:01.123456+00:00 LabSZ sshd[12395]: Accepted password for user34 from 192.168.20.26 port 54371 ssh2
+2025-11-09T05:20:01.123789+00:00 LabSZ sshd[12395]: pam_unix(sshd:session): session opened for user user34(uid=1034) by user34(uid=1034)
+2025-11-09T05:25:01.123456+00:00 LabSZ sshd[12396]: Accepted password for user35 from 192.168.20.27 port 54372 ssh2
+2025-11-09T05:25:01.123789+00:00 LabSZ sshd[12396]: pam_unix(sshd:session): session opened for user user35(uid=1035) by user35(uid=1035)
+2025-11-09T05:30:01.123456+00:00 LabSZ sshd[12397]: Failed password for invalid user fakeuser16 from 192.168.20.28 port 54373 ssh2
+2025-11-09T05:30:01.123789+00:00 LabSZ sshd[12397]: Disconnecting invalid user fakeuser16 192.168.20.28 port 54373: Too many authentication failures [preauth]
+2025-11-09T05:35:01.123456+00:00 LabSZ sshd[12398]: Accepted password for user36 from 192.168.20.29 port 54374 ssh2
+2025-11-09T05:35:01.123789+00:00 LabSZ sshd[12398]: pam_unix(sshd:session): session opened for user user36(uid=1036) by user36(uid=1036)
+2025-11-09T05:40:01.123456+00:00 LabSZ sshd[12399]: Accepted password for user37 from 192.168.20.30 port 54375 ssh2
+2025-11-09T05:40:01.123789+00:00 LabSZ sshd[12399]: pam_unix(sshd:session): session opened for user user37(uid=1037) by user37(uid=1037)
+2025-11-09T05:45:01.123456+00:00 LabSZ sshd[12400]: Failed password for invalid user fakeuser17 from 192.168.20.31 port 54376 ssh2
+2025-11-09T05:45:01.123789+00:00 LabSZ sshd[12400]: Disconnecting invalid user fakeuser17 192.168.20.31 port 54376: Too many authentication failures [preauth]
+2025-11-09T05:50:01.123456+00:00 LabSZ sshd[12401]: Accepted password for user38 from 192.168.20.32 port 54377 ssh2
+2025-11-09T05:50:01.123789+00:00 LabSZ sshd[12401]: pam_unix(sshd:session): session opened for user user38(uid=1038) by user38(uid=1038)
+2025-11-09T05:55:01.123456+00:00 LabSZ sshd[12402]: Accepted password for user39 from 192.168.20.33 port 54378 ssh2
+2025-11-09T05:55:01.123789+00:00 LabSZ sshd[12402]: pam_unix(sshd:session): session opened for user user39(uid=1039) by user39(uid=1039)
+2025-11-09T06:00
+2025-11-09T00:05:01.123456+00:00 LabSZ sshd[12345]: Accepted password for user1 from 192.168.20.10 port 54321 ssh2
+2025-11-09T00:15:02.234567+00:00 LabSZ sshd[12346]: Failed password for invalid user fakeuser from 192.168.20.15 port 53456 ssh2
+2025-11-09T00:25:03.345678+00:00 LabSZ sshd[12347]: Accepted publickey for user2 from 192.168.20.20 port 12345 ssh2
+2025-11-09T00:35:04.456789+00:00 LabSZ sshd[12348]: pam_unix(sshd:session): session opened for user user1(uid=1001) by user1(uid=1001)
+2025-11-09T00:45:05.567890+00:00 LabSZ sshd[12349]: pam_unix(sshd:session): session closed for user user1
+2025-11-09T00:55:06.678901+00:00 LabSZ sshd[12350]: Invalid user guest from 192.168.20.25 port 12346
+2025-11-09T01:05:07.789012+00:00 LabSZ sshd[12351]: Accepted password for user3 from 192.168.20.30 port 65432 ssh2
+2025-11-09T01:15:08.890123+00:00 LabSZ sshd[12352]: pam_unix(sshd:session): session opened for user user3(uid=1002) by user3(uid=1002)
+2025-11-09T01:25:09.901234+00:00 LabSZ sshd[12353]: pam_unix(sshd:session): session closed for user user3
+2025-11-09T01:35:10.012345+00:00 LabSZ sshd[12354]: Failed password for invalid user admin from 192.168.20.35 port 54321 ssh2
+2025-11-09T01:45:11.123456+00:00 LabSZ sshd[12355]: Accepted password for user4 from 192.168.20.40 port 12347 ssh2
+2025-11-09T01:55:12.234567+00:00 LabSZ sshd[12356]: pam_unix(sshd:session): session opened for user user4(uid=1003) by user4(uid=1003)
+2025-11-09T02:05:13.345678+00:00 LabSZ sshd[12357]: pam_unix(sshd:session): session closed for user user4
+2025-11-09T02:15:14.456789+00:00 LabSZ sshd[12358]: Invalid user test from 192.168.20.45 port 12348
+2025-11-09T02:25:15.567890+00:00 LabSZ sshd[12359]: Accepted password for user5 from 192.168.20.50 port 65433 ssh2
+2025-11-09T02:35:16.678901+00:00 LabSZ sshd[12360]: pam_unix(sshd:session): session opened for user user5(uid=1004) by user5(uid=1004)
+2025-11-09T02:45:17.789012+00:00 LabSZ sshd[12361]: pam_unix(sshd:session): session closed for user user5
+2025-11-09T02:55:18.890123+00:00 LabSZ sshd[12362]: Failed password for invalid user unknown from 192.168.20.55 port 12349 ssh2
+2025-11-09T03:05:19.901234+00:00 LabSZ sshd[12363]: Accepted password for user6 from 192.168.20.60 port 65434 ssh2
+2025-11-09T03:15:20.012345+00:00 LabSZ sshd[12364]: pam_unix(sshd:session): session opened for user user6(uid=1005) by user6(uid=1005)
+2025-11-09T03:25:21.123456+00:00 LabSZ sshd[12365]: pam_unix(sshd:session): session closed for user user6
+2025-11-09T03:35:22.234567+00:00 LabSZ sshd[12366]: Invalid user temp from 192.168.20.65 port 12350
+2025-11-09T03:45:23.345678+00:00 LabSZ sshd[12367]: Accepted password for user7 from 192.168.20.70 port 65435 ssh2
+2025-11-09T03:55:24.456789+00:00 LabSZ sshd[12368]: pam_unix(sshd:session): session opened for user user7(uid=1006) by user7(uid=1006)
+2025-11-09T04:05:25.567890+00:00 LabSZ sshd[12369]: pam_unix(sshd:session): session closed for user user7
+2025-11-09T04:15:26.678901+00:00 LabSZ sshd[12370]: Failed password for invalid user fakeuser from 192.168.20.75 port 12351 ssh2
+2025-11-09T04:25:27.789012+00:00 LabSZ sshd[12371]: Accepted password for user8 from 192.168.20.80 port 65436 ssh2
+2025-11-09T04:35:28.890123+00:00 LabSZ sshd[12372]: pam_unix(sshd:session): session opened for user user8(uid=1007) by user8(uid=1007)
+2025-11-09T04:45:29.901234+00:00 LabSZ sshd[12373]: pam_unix(sshd:session): session closed for user user8
+2025-11-09T04:55:30.012345+00:00 LabSZ sshd[12374]: Invalid user guest from 192.168.20.85 port 12352
+2025-11-09T05:05:31.123456+00:00 LabSZ sshd[12375]: Accepted password for user9 from 192.168.20.90 port 65437 ssh2
+2025-11-09T05:15:32.234567+00:00 LabSZ sshd[12376]: pam_unix(sshd:session): session opened for user user9(uid=1008) by user9(uid=1008)
+2025-11-09T05:25:33.345678+00:00 LabSZ sshd[12377]: pam_unix(sshd:session): session closed for user user9
+2025-11-09T05:35:34.456789+00:00 LabSZ sshd[12378]: Failed password for invalid user admin from 192.168.20.95 port 12353 ssh2
+2025-11-09T05:45:35.567890+00:00 LabSZ sshd[12379]: Accepted password for user10 from 192.168.20.100 port 65438 ssh2
+2025-11-09T05:55:36.678901+00:00 LabSZ sshd[12380]: pam_unix(sshd:session): session opened for user user10(uid=1009) by user10(uid=1009)
+2025-11-09T06:05:37.789012+00:00 LabSZ sshd[12381]: pam_unix(sshd:session): session closed for user user10
+2025-11-09T06:15:38.890123+00:00 LabSZ sshd[12382]: Invalid user testuser from 192.168.20.105 port 12354
+2025-11-09T06:25:39.901234+00:00 LabSZ sshd[12383]: Accepted password for user11 from 192.168.20.110 port 65439 ssh2
+2025-11-09T06:35:40.012345+00:00 LabSZ sshd[12384]: pam_unix(sshd:session): session opened for user user11(uid=1010) by user11(uid=1010)
+2025-11-09T06:45:41.123456+00:00 LabSZ sshd[12385]: pam_unix(sshd:session): session closed for user user11
+2025-11-09T06:55:42.234567+00:00 LabSZ sshd[12386]: Failed password for invalid user fakeuser from 192.168.20.115 port 12355 ssh2
+2025-11-09T07:05:43.345678+00:00 LabSZ sshd[12387]: Accepted password for user12 from 192.168.20.120 port 65440 ssh2
+2025-11-09T07:15:44.456789+00:00 LabSZ sshd[12388]: pam_unix(sshd:session): session opened for user user12(uid=1011) by user12(uid=1011)
+2025-11-09T07:25:45.567890+00:00 LabSZ sshd[12389]: pam_unix(sshd:session): session closed for user user12
+2025-11-09T07:35:46.678901+00:00 LabSZ sshd[12390]: Invalid user tempuser from 192.168.20.125 port 12356
+2025-11-09T07:45:47.789012+00:00 LabSZ sshd[12391]: Accepted password for user13 from 192.168.20.130 port 65441 ssh2
+2025-11-09T07:55:48.890123+00:00 LabSZ sshd[12392]: pam_unix(sshd:session): session opened for user user13(uid=1012) by user13(uid=1012)
+2025-11-09T08:05:49.901234+00:00 LabSZ sshd[12393]: pam_unix(sshd:session): session closed for user user13
+2025-11-09T08:15:50.012345+00:00 LabSZ sshd[12394]: Failed password for invalid user unknown from 192.168.20.135 port 12357 ssh2
+2025-11-09T08:25:51.123456+00:00 LabSZ sshd[12395]: Accepted password for user14 from 192.168.20.140 port 65442 ssh2
+2025-11-09T08:35:52.234567+00:00 LabSZ sshd[12396]: pam_unix(sshd:session): session opened for user user14(uid=1013) by user14(uid=1013)
+2025-11-09T08:45:53.345678+00:00 LabSZ sshd[12397]: pam_unix(sshd:session): session closed for user user14
+2025-11-09T08:55:54.456789+00:00 LabSZ sshd[12398]: Invalid user guest from 192.168.20.145 port 12358
+2025-11-09T09:05:55.567890+00:00 LabSZ sshd[12399]: Accepted password for user15 from 192.168.20.150 port 65443 ssh2
+2025-11-09T09:15:56.678901+00:00 LabSZ sshd[12400]: pam_unix(sshd:session): session opened for user user15(uid=1014) by user15(uid=1014)
+2025-11-09T09:25:57.789012+00:00 LabSZ sshd[12401]: pam_unix(sshd:session): session closed for user user15
+2025-11-09T09:35:58.890123+00:00 LabSZ sshd[12402]: Failed password for invalid user admin from 192.168.20.155 port 12359 ssh2
+2025-11-09T09:45:59.901234+00:00 LabSZ sshd[12403]: Accepted password for user16 from 192.168.20.160 port 65444 ssh2
+2025-11-09T09:56:00.012345+00:00 LabSZ sshd[12404]: pam_unix(sshd:session): session opened for user user16(uid=1015) by user16(uid=1015)
+2025-11-09T10:06:01.123456+00:00 LabSZ sshd[12405]: pam_unix(sshd:session): session closed for user user16
+2025-11-09T10:16:02.234567+00:00 LabSZ sshd[12406]: Invalid user testuser from 192.168.20.165 port 12360
+2025-11-09T10:26:03.345678+00:00 LabSZ sshd[12407]: Accepted password for user17 from 192.168.20.170 port 65445 ssh2
+2025-11-09T10:36:04.456789+00:00 LabSZ sshd[12408]: pam_unix(sshd:session): session opened for user user17(uid=1016) by user17(uid=1016)
+2025-11-09T10:46:05.567890+00:00 LabSZ sshd[12409]: pam_unix(sshd:session): session closed for user user17
+2025-11-09T10:56:06.678901+00:00 LabSZ sshd[12410]: Failed password for invalid user fakeuser from 192.168.20.175 port 12361 ssh2
+2025-11-09T11:06:07.789012+00:00 LabSZ sshd[12411]: Accepted password for user18 from 192.168.20.180 port 65446 ssh2
+2025-11-09T11:16:08.890123+00:00 LabSZ sshd[12412]: pam_unix(sshd:session): session opened for user user18(uid=1017) by user18(uid=1017)
+2025-11-09T11:26:09.901234+00:00 LabSZ sshd[12413]: pam_unix(sshd:session): session closed for user user18
+2025-11-09T11:36:10.012345+00:00 LabSZ sshd[12414]: Invalid user guest from 192.168.20.185 port 12362
+2025-11-09T11:46:11.123456+00:00 LabSZ sshd[12415]: Accepted password for user19 from 192.168.20.190 port 65447 ssh2
+2025-11-09T11:56:12.234567+00:00 LabSZ sshd[12416]: pam_unix(sshd:session): session opened for user user19(uid=1018) by user19(uid=1018)
+2025-11-09T12:06:13.345678+00:00 LabSZ sshd[12417]: pam_unix(sshd:session): session closed for user user19
+2025-11-09T12:16:14.456789+00:00 LabSZ sshd[12418]: Failed password for invalid user admin from 192.168.20.195 port 12363 ssh2
+2025-11-09T12:26:15.567890+00:00 LabSZ sshd[12419]: Accepted password for user20 from 192.168.20.200 port 65448 ssh2
+2025-11-09T12:36:16.678901+00:00 LabSZ sshd[12420]: pam_unix(sshd:session): session opened for user user20(uid=1019) by user20(uid=1019)
+2025-11-09T12:46:17.789012+00:00 LabSZ sshd[12421]: pam_unix(sshd:session): session closed for user user20
+2025-11-09T12:56:18.890123+00:00 LabSZ sshd[12422]: Invalid user temp from 192.168.20.205 port 12364
+2025-11-09T13:06:19.901234+00:00 LabSZ sshd[12423]: Accepted password for user21 from 192.168.20.210 port 65449 ssh2
+2025-11-09T13:16:20.012345+00:00 LabSZ sshd[12424]: pam_unix(sshd:session): session opened for user user21(uid=1020) by user21(uid=1020)
+2025-11-09T13:26:21.123456+00:00 LabSZ sshd[12425]: pam_unix(sshd:session): session closed for user user21
+2025-11-09T13:36:22.234567+00:00 LabSZ sshd[12426]: Failed password for invalid user fakeuser from 192.168.20.215 port 12365 ssh2
+2025-11-09T13:46:23.345678+00:00 LabSZ sshd[12427]: Accepted password for user22 from 192.168.20.220 port 65450 ssh2
