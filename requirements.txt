@@ -6,3 +6,4 @@ gunicorn
 paramiko
 python-dateutil
 jsbeautifier
+requests
