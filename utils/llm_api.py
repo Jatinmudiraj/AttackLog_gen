@@ -186,13 +186,17 @@
 #     # Trim exactly to requested lines
 #     return lines[:num_lines]
 # utils/llm_api.py
+
 from typing import List, Optional
-from openai import OpenAI
 import os
 import json
+import openai   # ✅ new SDK import
 
 from config import OPENAI_API_KEY
 from utils.memory_utils import get_history, add_turn
+
+# ✅ Set API key globally (Render compatible)
+openai.api_key = OPENAI_API_KEY
 
 SETTINGS_FILE = "app_settings.json"
 
@@ -211,10 +215,6 @@ def load_selected_model() -> str:
             return data.get("api_model", "gpt-4o-mini")
     except Exception:
         return "gpt-4o-mini"
-
-
-# Initialize OpenAI client
-client = OpenAI(api_key=OPENAI_API_KEY)
 
 
 def build_prompt(
@@ -313,11 +313,10 @@ def generate_logs_via_api(
         if history:
             messages.extend(history)
 
-    # Current user request
     messages.append({"role": "user", "content": final_prompt})
 
-    # Call OpenAI API
-    response = client.chat.completions.create(
+    # ✅ OpenAI official call (Render-safe)
+    response = openai.chat.completions.create(
         model=model_name,
         messages=messages,
         temperature=temperature,
@@ -328,7 +327,7 @@ def generate_logs_via_api(
     raw = (response.choices[0].message.content or "").strip()
     lines = [line for line in raw.splitlines() if line.strip()]
 
-    # If not enough lines, try one small follow-up generation
+    # If not enough lines, attempt follow-up generation
     if len(lines) < num_lines:
         needed = num_lines - len(lines)
         regen_prompt = final_prompt + f"\n\nNow generate {needed} MORE new unique log lines."
@@ -347,7 +346,7 @@ def generate_logs_via_api(
 
         regen_messages.append({"role": "user", "content": regen_prompt})
 
-        regen = client.chat.completions.create(
+        regen = openai.chat.completions.create(
             model=model_name,
             messages=regen_messages,
             temperature=temperature,
@@ -359,10 +358,10 @@ def generate_logs_via_api(
         extra_lines = [x for x in extra_raw.splitlines() if x.strip()]
         lines.extend(extra_lines)
 
-    # Trim exactly to requested lines
+    # Trim exactly to requested number
     final_lines = lines[:num_lines]
 
-    # Store this turn in memory (prompt + generated text)
+    # Save memory turn
     if memory_id:
         add_turn(memory_id, final_prompt, "\n".join(final_lines))
 
